@@ -12,14 +12,10 @@ export default function HomePage() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const scrollToWaitlist = () => {
-    document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div>
       <StripedBlock>
-        <Hero onCta={scrollToWaitlist} />
+        <Hero />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24 space-y-20">
           {/* What's Inside */}
