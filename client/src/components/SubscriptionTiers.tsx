@@ -22,7 +22,13 @@ export default function SubscriptionTiers() {
                 Save {tier.savePct}%
               </span>
             )}
-            <h4 className="font-sans font-semibold text-earth-800 mb-3 mt-2">
+            <img
+              src="/envelope.png"
+              alt=""
+              aria-hidden="true"
+              className="h-16 w-auto mx-auto mb-3 mt-2"
+            />
+            <h4 className="font-sans font-semibold text-earth-800 mb-3">
               {tier.label}
             </h4>
             <div className="flex justify-center items-baseline gap-1 mb-1">
