@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 /*
-  --font-serif is a handwritten display face, used sparingly for big
-  statement headings (hero, section titles, the wordmark) so it reads as a
-  personal note rather than body copy. Small headings (card titles, footer
-  labels) use --font-sans at a heavier weight instead, for legibility.
+  --font-serif is a typewriter display face, used for big statement
+  headings (hero, section titles) so it reads like a typed letter. Small
+  headings (card titles, footer labels) use --font-sans at a heavier
+  weight instead, since Special Elite only ships one weight and gets hard
+  to read at small sizes.
 */
 @theme {
-  --font-serif: "Caveat", cursive;
+  --font-serif: "Special Elite", cursive;
   --font-sans: "Inter", sans-serif;
   --color-blue-50: #f4f7f2;
   --color-blue-100: #e6ece1;
@@ -42,5 +43,15 @@ body {
   font-family: var(--font-sans);
   color: var(--color-earth-800);
   background-color: var(--color-warm-50);
+}
+
+@keyframes envelope-flap-open {
+  from { transform: rotateX(0deg); }
+  to { transform: rotateX(-155deg); }
+}
+
+@keyframes envelope-card-rise {
+  from { transform: translateY(6px) scale(0.94); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
 }
 

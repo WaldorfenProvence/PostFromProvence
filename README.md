@@ -31,16 +31,26 @@ credentials) — not the normal path, since Git-based deploys handle it.
 
 ## What's Built So Far (Phase 1)
 
-- Home, Mail Club, Shop (coming-soon placeholder), About pages
-- Mail Club content ported from `waldorf-en-provence`'s `MailClubTab.tsx`
+- Single Home page carries everything (hero, what's inside, pricing,
+  waitlist, FAQ) — there's no separate Mail Club page anymore, it was
+  folded in since having both felt redundant. Shop (coming-soon
+  placeholder) and About remain separate pages.
+- Real logo (`wordmark.png`, `stripes.png` in `client/public/`) used as
+  the header/footer/heading brand mark and hero accent — extracted from
+  `~/Documents/Brand Identity Waldorf en Provence (2).svg`, which is a
+  flattened raster export with no live font data.
 - Color palette carried over from `waldorf-en-provence`'s design tokens
   (`client/src/index.css`)
-- Typeface: `Caveat` (handwritten, used sparingly for big display headings
-  and the wordmark) + `Inter` (body copy and small headings, for
-  legibility) — swap `--font-serif`/`--font-sans` in `index.css` and the
-  Google Fonts link in `index.html` if you want to try something else
-- Mail Club "waitlist" signup form is a local-only stub (just flips to a
-  thank-you state) — not wired to any backend yet
+- Typeface: `Special Elite` (typewriter, used for big statement headings)
+  + `Inter` (body copy and small headings) — swap `--font-serif`/
+  `--font-sans` in `index.css` and the Google Fonts link in `index.html`
+  if you want to try something else. Special Elite only ships one weight,
+  so headings using it skip `font-semibold`.
+- `AnimatedEnvelope.tsx` — a small envelope illustration in the hero
+  whose flap opens and reveals three peeking contents cards on load, and
+  replays on hover.
+- Waitlist signup form is a local-only stub (just flips to a thank-you
+  state) — not wired to any backend yet
 - Consulting ("Pick Our Brains") page intentionally left out. To add it
   back: add a `"consulting"` entry to the `Tab` type in `App.tsx`, the nav
   array in `Header.tsx`, and a rendered case in `App.tsx`

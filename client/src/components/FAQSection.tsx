@@ -20,9 +20,9 @@ export default function FAQSection() {
 
   return (
     <section>
-      <h3 className="text-3xl font-serif font-semibold text-earth-800 mb-10 text-center">
+      <h2 className="text-3xl font-serif text-earth-800 mb-10 text-center">
         FAQs
-      </h3>
+      </h2>
       <div className="max-w-2xl mx-auto space-y-3">
         {FAQS.map((item, i) => {
           const open = openIndex === i;

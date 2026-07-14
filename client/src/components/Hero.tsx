@@ -1,6 +1,8 @@
+import AnimatedEnvelope from "./AnimatedEnvelope";
+
 export default function Hero({ onCta }: { onCta: () => void }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-blue-100 via-warm-50 to-warm-50 py-20 sm:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-b from-blue-100 via-warm-50 to-warm-50 py-16 sm:py-24">
       <img
         src="/stripes.png"
         alt=""
@@ -14,7 +16,10 @@ export default function Hero({ onCta }: { onCta: () => void }) {
         className="hidden md:block absolute top-0 left-0 h-full w-auto opacity-70 -scale-x-100"
       />
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <h1 className="text-5xl sm:text-7xl font-serif font-semibold leading-tight text-earth-800 mb-6">
+        <div className="mb-8">
+          <AnimatedEnvelope />
+        </div>
+        <h1 className="text-4xl sm:text-6xl font-serif leading-tight text-earth-800 mb-6">
           A Handcrafted Post, Every Month
         </h1>
         <p className="text-lg text-earth-700 leading-relaxed mb-8">

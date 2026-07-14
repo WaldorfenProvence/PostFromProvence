@@ -9,7 +9,6 @@ export default function Header({
 }) {
   // To bring back the consulting page later: add { id: "consulting", label: "Pick Our Brains" } here.
   const tabs: { id: Tab; label: string }[] = [
-    { id: "mailclub", label: "Mail Club" },
     { id: "shop", label: "Shop" },
     { id: "about", label: "About" },
   ];
