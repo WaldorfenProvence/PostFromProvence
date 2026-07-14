@@ -1,7 +1,7 @@
 export default function StripeBorders() {
   return (
     <div
-      className="hidden lg:block fixed inset-y-0 left-0 right-0 pointer-events-none -z-10"
+      className="hidden lg:block absolute inset-y-0 left-0 right-0 pointer-events-none -z-10"
       aria-hidden="true"
     >
       <div

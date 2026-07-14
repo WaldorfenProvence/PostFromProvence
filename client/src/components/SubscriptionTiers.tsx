@@ -1,6 +1,5 @@
 const TIERS = [
   { label: "Monthly", months: 1, pricePerMonth: 15, total: 15, savePct: null },
-  { label: "3 Months", months: 3, pricePerMonth: 14, total: 42, savePct: 7 },
   { label: "6 Months", months: 6, pricePerMonth: 13, total: 78, savePct: 13 },
   { label: "1 Year", months: 12, pricePerMonth: 12, total: 144, savePct: 20 },
 ];
@@ -8,7 +7,7 @@ const TIERS = [
 export default function SubscriptionTiers() {
   return (
     <div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid sm:grid-cols-3 gap-5">
         {TIERS.map((tier) => (
           <div
             key={tier.label}

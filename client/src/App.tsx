@@ -36,7 +36,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="relative min-h-screen flex flex-col">
       <StripeBorders />
       <Header activeTab={activeTab} onNavigate={changeTab} />
       <main className="flex-1">
