@@ -5,6 +5,7 @@ import ShopComingSoon from "./components/ShopComingSoon";
 import AboutPage from "./components/AboutPage";
 import Footer from "./components/Footer";
 import StripeBorders from "./components/StripeBorders";
+import StripeRibbon from "./components/StripeRibbon";
 
 // Consulting ("Pick Our Brains") is deliberately left out for now — to add
 // it back later, add "consulting" here and to the nav array in Header.tsx,
@@ -38,6 +39,7 @@ export default function App() {
   return (
     <div className="relative min-h-screen flex flex-col">
       <StripeBorders />
+      <StripeRibbon />
       <Header activeTab={activeTab} onNavigate={changeTab} />
       <main className="flex-1">
         {activeTab === "home" && <HomePage />}
@@ -45,6 +47,7 @@ export default function App() {
         {activeTab === "about" && <AboutPage />}
       </main>
       <Footer />
+      <StripeRibbon flip />
     </div>
   );
 }
