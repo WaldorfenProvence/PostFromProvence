@@ -42,16 +42,6 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-earth-800);
-  background-color: var(--color-warm-50);
-}
-
-@keyframes envelope-flap-open {
-  from { transform: rotateX(0deg); }
-  to { transform: rotateX(-155deg); }
-}
-
-@keyframes envelope-card-rise {
-  from { transform: translateY(6px) scale(0.94); opacity: 0; }
-  to { transform: translateY(0) scale(1); opacity: 1; }
+  background-color: #ffffff;
 }
 
