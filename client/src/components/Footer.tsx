@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-blue-600 text-warm-100 py-12 mt-16">
+    <footer className="bg-blue-600 text-warm-100 py-12 mt-16 lg:mx-40 xl:mx-52">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 gap-8 mb-8">
           <div>

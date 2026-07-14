@@ -2,19 +2,7 @@ import AnimatedEnvelope from "./AnimatedEnvelope";
 
 export default function Hero({ onCta }: { onCta: () => void }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-blue-100 via-warm-50 to-warm-50 py-16 sm:py-24">
-      <img
-        src="/stripes.png"
-        alt=""
-        aria-hidden="true"
-        className="hidden md:block absolute top-0 right-0 h-full w-auto opacity-70"
-      />
-      <img
-        src="/stripes.png"
-        alt=""
-        aria-hidden="true"
-        className="hidden md:block absolute top-0 left-0 h-full w-auto opacity-70 -scale-x-100"
-      />
+    <section className="relative overflow-hidden bg-gradient-to-b from-blue-100 via-warm-50 to-warm-50 py-16 sm:py-24 lg:mx-40 xl:mx-52">
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <div className="mb-8">
           <AnimatedEnvelope />
