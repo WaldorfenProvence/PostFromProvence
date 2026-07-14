@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const FAQS = [
   {
     q: "When will I receive my post?",
@@ -16,45 +14,28 @@ const FAQS = [
 ];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
   return (
     <section>
-      <h2 className="text-3xl font-serif text-earth-800 mb-10 text-center">
-        FAQs
+      <h2 className="text-4xl font-serif text-earth-800 mb-10 text-center">
+        FAQ's
       </h2>
-      <div className="max-w-2xl mx-auto space-y-3">
-        {FAQS.map((item, i) => {
-          const open = openIndex === i;
-          return (
-            <div
-              key={item.q}
-              className="border border-warm-200 rounded-xl overflow-hidden"
-            >
-              <button
-                onClick={() => setOpenIndex(open ? null : i)}
-                className="w-full flex items-center justify-between gap-4 text-left px-5 py-4 cursor-pointer bg-warm-100 hover:bg-warm-200 transition-colors"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-slate-600 text-white text-xs font-semibold flex items-center justify-center">
-                    {i + 1}
-                  </span>
-                  <span className="font-sans font-semibold text-earth-800">
-                    {item.q}
-                  </span>
-                </span>
-                <span className="text-earth-700 text-lg leading-none">
-                  {open ? "−" : "+"}
-                </span>
-              </button>
-              {open && (
-                <p className="px-5 py-4 text-sm text-earth-700 leading-relaxed bg-white">
-                  {item.a}
-                </p>
-              )}
+      <div className="max-w-3xl mx-auto">
+        {FAQS.map((item, i) => (
+          <div key={item.q}>
+            <div className="border-t-2 border-blue-600 mb-6" />
+            <div className="grid grid-cols-[auto_1fr] sm:grid-cols-[auto_200px_1fr] gap-x-4 sm:gap-x-8 gap-y-2 mb-6 items-start">
+              <span className="text-4xl font-serif text-blue-600 row-span-2 sm:row-span-1">
+                {i + 1}
+              </span>
+              <p className="font-sans font-semibold text-earth-800">
+                {item.q}
+              </p>
+              <p className="col-span-2 sm:col-span-1 text-sm text-earth-700 leading-relaxed">
+                {item.a}
+              </p>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </section>
   );
