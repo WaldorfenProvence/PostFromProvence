@@ -39,7 +39,6 @@ export default function App() {
   return (
     <div className="relative min-h-screen flex flex-col">
       <StripeBorders />
-      <StripeRibbon />
       <Header activeTab={activeTab} onNavigate={changeTab} />
       <main className="flex-1">
         {activeTab === "home" && <HomePage />}
