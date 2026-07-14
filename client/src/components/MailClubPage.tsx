@@ -19,8 +19,12 @@ export default function MailClubPage() {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
       {/* Intro */}
       <section className="text-center max-w-3xl mx-auto">
-        <h2 className="text-5xl sm:text-6xl font-serif font-semibold text-earth-800 mb-6">
-          Post from Provence
+        <h2 className="mb-6">
+          <img
+            src="/wordmark.png"
+            alt="Post from Provence"
+            className="h-16 sm:h-20 w-auto mx-auto"
+          />
         </h2>
         <p className="text-lg text-earth-700 leading-relaxed">
           Each month, receive a handcrafted post from Provence — filled with

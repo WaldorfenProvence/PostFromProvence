@@ -1,7 +1,4 @@
-import { EnvelopeIcon } from "./OrganicIcons";
 import type { Tab } from "../App";
-
-const ICON_COLOR = "#cdb42d";
 
 export default function Header({
   activeTab,
@@ -22,12 +19,13 @@ export default function Header({
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <button
           onClick={() => onNavigate("home")}
-          className="flex items-center gap-2 cursor-pointer"
+          className="flex items-center cursor-pointer"
         >
-          <EnvelopeIcon color={ICON_COLOR} size={24} />
-          <span className="font-serif text-2xl sm:text-3xl font-semibold text-earth-800 whitespace-nowrap">
-            Post From Provence
-          </span>
+          <img
+            src="/wordmark.png"
+            alt="Post From Provence"
+            className="h-9 sm:h-10 w-auto"
+          />
         </button>
         <nav className="flex items-center gap-1 sm:gap-2">
           {tabs.map((tab) => (
