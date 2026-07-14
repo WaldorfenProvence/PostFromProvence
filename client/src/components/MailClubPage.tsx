@@ -8,6 +8,8 @@ import {
   FlowerIcon,
 } from "./OrganicIcons";
 import OrganicDivider from "./OrganicDivider";
+import SubscriptionTiers from "./SubscriptionTiers";
+import FAQSection from "./FAQSection";
 
 const ICON_COLOR = "#cdb42d";
 
@@ -92,46 +94,18 @@ export default function MailClubPage() {
       <OrganicDivider />
 
       {/* Pricing */}
-      <section className="max-w-2xl mx-auto">
-        <div className="bg-blue-50 rounded-2xl p-8 sm:p-12 border border-blue-100 text-center">
-          <h3 className="text-3xl font-serif font-semibold text-earth-800 mb-2">
-            Monthly Subscription
-          </h3>
-          <p className="text-earth-700 mb-6">
-            Delivered to your door — international shipping available
-          </p>
-          <div className="flex justify-center items-baseline gap-1 mb-8">
-            <span className="text-4xl font-sans font-bold text-blue-600">
-              €15
-            </span>
-            <span className="text-earth-700">/month</span>
-          </div>
-          <ul className="text-sm text-earth-700 space-y-2 text-left max-w-xs mx-auto mb-6">
-            <li className="flex items-start gap-1.5">
-              <span className="text-blue-500">✓</span>
-              Original art print each month
-            </li>
-            <li className="flex items-start gap-1.5">
-              <span className="text-blue-500">✓</span>
-              Seasonal recipe from Provence
-            </li>
-            <li className="flex items-start gap-1.5">
-              <span className="text-blue-500">✓</span>
-              Letter, story, and seasonal activity
-            </li>
-            <li className="flex items-start gap-1.5">
-              <span className="text-blue-500">✓</span>
-              Cancel anytime
-            </li>
-          </ul>
-          <p className="text-xs text-earth-700/70">
-            Also available as a gift subscription.
-          </p>
-        </div>
+      <section>
+        <h3 className="text-3xl font-serif font-semibold text-earth-800 mb-2 text-center">
+          Choose Your Subscription
+        </h3>
+        <p className="text-earth-700 mb-10 text-center">
+          Delivered to your door — international shipping available
+        </p>
+        <SubscriptionTiers />
       </section>
 
       {/* Signup Form — placeholder waitlist capture until Stripe Checkout is wired up */}
-      <section className="max-w-lg mx-auto text-center mt-16">
+      <section id="waitlist" className="max-w-lg mx-auto text-center mt-16 scroll-mt-24">
         <h3 className="text-3xl font-serif font-semibold text-earth-800 mb-4">
           Join the Waitlist
         </h3>
@@ -175,6 +149,10 @@ export default function MailClubPage() {
           </form>
         )}
       </section>
+
+      <OrganicDivider />
+
+      <FAQSection />
 
       <OrganicDivider />
 
