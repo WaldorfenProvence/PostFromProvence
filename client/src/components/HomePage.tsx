@@ -12,11 +12,11 @@ export default function HomePage({
     <div>
       <Hero onCta={() => onNavigate("mailclub")} />
 
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-earth-800 mb-10 text-center">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+        <h2 className="text-4xl sm:text-5xl font-serif font-semibold text-earth-800 mb-14 text-center">
           A Small Envelope, Full of Provence
         </h2>
-        <div className="grid sm:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-3 gap-10">
           {[
             { Icon: PaletteIcon, title: "Original Art", desc: "A seasonal watercolour print, unique to that month." },
             { Icon: BowlIcon, title: "Seasonal Recipe", desc: "Something simple and nourishing from a Provençal kitchen." },
@@ -26,7 +26,7 @@ export default function HomePage({
               <div className="flex justify-center mb-3">
                 <item.Icon color={ICON_COLOR} size={32} />
               </div>
-              <h3 className="font-serif font-semibold text-earth-800 mb-1">
+              <h3 className="font-sans font-semibold text-earth-800 mb-1">
                 {item.title}
               </h3>
               <p className="text-sm text-earth-700 leading-relaxed">
@@ -35,7 +35,7 @@ export default function HomePage({
             </div>
           ))}
         </div>
-        <div className="text-center mt-10">
+        <div className="text-center mt-12">
           <button
             onClick={() => onNavigate("mailclub")}
             className="text-blue-600 hover:text-blue-500 font-medium underline underline-offset-4 cursor-pointer"

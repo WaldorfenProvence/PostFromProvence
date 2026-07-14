@@ -7,7 +7,7 @@ export default function Hero({ onCta }: { onCta: () => void }) {
         <div className="flex justify-center mb-6">
           <EnvelopeIcon color="#cdb42d" size={40} />
         </div>
-        <h1 className="text-4xl sm:text-6xl font-serif font-semibold leading-tight text-earth-800 mb-6">
+        <h1 className="text-5xl sm:text-7xl font-serif font-semibold leading-tight text-earth-800 mb-6">
           A Handcrafted Post, Every Month
         </h1>
         <p className="text-lg text-earth-700 leading-relaxed mb-8">

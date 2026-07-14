@@ -6,7 +6,7 @@ export default function ShopComingSoon() {
       <div className="flex justify-center mb-4">
         <PaletteIcon color="#cdb42d" size={40} />
       </div>
-      <h2 className="text-3xl font-serif font-semibold text-earth-800 mb-4">
+      <h2 className="text-4xl sm:text-5xl font-serif font-semibold text-earth-800 mb-4">
         Shop — Coming Soon
       </h2>
       <p className="text-earth-700 leading-relaxed">

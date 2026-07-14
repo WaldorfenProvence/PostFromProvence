@@ -7,6 +7,7 @@ import {
   LeafIcon,
   FlowerIcon,
 } from "./OrganicIcons";
+import OrganicDivider from "./OrganicDivider";
 
 const ICON_COLOR = "#cdb42d";
 
@@ -15,10 +16,10 @@ export default function MailClubPage() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
       {/* Intro */}
       <section className="text-center max-w-3xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-earth-800 mb-6">
+        <h2 className="text-5xl sm:text-6xl font-serif font-semibold text-earth-800 mb-6">
           Post from Provence
         </h2>
         <p className="text-lg text-earth-700 leading-relaxed">
@@ -29,12 +30,14 @@ export default function MailClubPage() {
         </p>
       </section>
 
+      <OrganicDivider />
+
       {/* What's Inside */}
       <section>
-        <h3 className="text-2xl font-serif font-semibold text-earth-800 mb-8 text-center">
+        <h3 className="text-3xl sm:text-4xl font-serif font-semibold text-earth-800 mb-12 text-center">
           What Arrives Each Month
         </h3>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
               Icon: PaletteIcon,
@@ -67,14 +70,11 @@ export default function MailClubPage() {
               desc: "Each packet reflects the rhythm of the Provençal year — lavender harvest, olive pressing, winter solstice, spring planting.",
             },
           ].map((item) => (
-            <div
-              key={item.title}
-              className="bg-warm-100 rounded-xl p-6 border border-warm-200"
-            >
-              <div className="mb-3">
-                <item.Icon color={ICON_COLOR} size={32} />
+            <div key={item.title} className="p-2">
+              <div className="mb-4">
+                <item.Icon color={ICON_COLOR} size={36} />
               </div>
-              <h4 className="font-serif font-semibold text-earth-800 mb-2">
+              <h4 className="font-sans font-semibold text-earth-800 mb-2">
                 {item.title}
               </h4>
               <p className="text-sm text-earth-700 leading-relaxed">
@@ -85,17 +85,19 @@ export default function MailClubPage() {
         </div>
       </section>
 
+      <OrganicDivider />
+
       {/* Pricing */}
       <section className="max-w-2xl mx-auto">
-        <div className="bg-blue-50 rounded-2xl p-8 sm:p-10 border border-blue-100 text-center">
-          <h3 className="text-2xl font-serif font-semibold text-earth-800 mb-2">
+        <div className="bg-blue-50 rounded-2xl p-8 sm:p-12 border border-blue-100 text-center">
+          <h3 className="text-3xl font-serif font-semibold text-earth-800 mb-2">
             Monthly Subscription
           </h3>
           <p className="text-earth-700 mb-6">
             Delivered to your door — international shipping available
           </p>
-          <div className="flex justify-center items-baseline gap-1 mb-6">
-            <span className="text-4xl font-serif font-semibold text-blue-600">
+          <div className="flex justify-center items-baseline gap-1 mb-8">
+            <span className="text-4xl font-sans font-bold text-blue-600">
               €15
             </span>
             <span className="text-earth-700">/month</span>
@@ -125,8 +127,8 @@ export default function MailClubPage() {
       </section>
 
       {/* Signup Form — placeholder waitlist capture until Stripe Checkout is wired up */}
-      <section className="max-w-lg mx-auto text-center">
-        <h3 className="text-2xl font-serif font-semibold text-earth-800 mb-4">
+      <section className="max-w-lg mx-auto text-center mt-16">
+        <h3 className="text-3xl font-serif font-semibold text-earth-800 mb-4">
           Join the Waitlist
         </h3>
         <p className="text-earth-700 mb-6 text-sm">
@@ -170,9 +172,11 @@ export default function MailClubPage() {
         )}
       </section>
 
+      <OrganicDivider />
+
       {/* Why */}
-      <section className="text-center max-w-2xl mx-auto border-t border-warm-200 pt-12">
-        <h3 className="text-xl font-serif font-semibold text-earth-800 mb-4">
+      <section className="text-center max-w-2xl mx-auto">
+        <h3 className="text-2xl font-serif font-semibold text-earth-800 mb-4">
           Why Mail Club?
         </h3>
         <p className="text-earth-700 leading-relaxed">

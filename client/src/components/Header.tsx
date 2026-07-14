@@ -25,7 +25,7 @@ export default function Header({
           className="flex items-center gap-2 cursor-pointer"
         >
           <EnvelopeIcon color={ICON_COLOR} size={24} />
-          <span className="font-serif text-lg sm:text-xl font-semibold text-earth-800 whitespace-nowrap">
+          <span className="font-serif text-2xl sm:text-3xl font-semibold text-earth-800 whitespace-nowrap">
             Post From Provence
           </span>
         </button>

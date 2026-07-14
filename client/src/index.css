@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 /*
-  Typeface is a placeholder — swap --font-serif/--font-sans here (and the
-  Google Fonts <link> in index.html) once you've settled on the brand font.
-  Color palette is carried over from waldorf-en-provence's design tokens.
+  --font-serif is a handwritten display face, used sparingly for big
+  statement headings (hero, section titles, the wordmark) so it reads as a
+  personal note rather than body copy. Small headings (card titles, footer
+  labels) use --font-sans at a heavier weight instead, for legibility.
 */
 @theme {
-  --font-serif: "Fraunces", serif;
+  --font-serif: "Caveat", cursive;
   --font-sans: "Inter", sans-serif;
   --color-blue-50: #f4f7f2;
   --color-blue-100: #e6ece1;
@@ -43,6 +44,3 @@ body {
   background-color: var(--color-warm-50);
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-serif);
-}

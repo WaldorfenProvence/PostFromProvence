@@ -1,7 +1,7 @@
 export default function AboutPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-24">
-      <h2 className="text-3xl font-serif font-semibold text-earth-800 mb-6 text-center">
+      <h2 className="text-4xl sm:text-5xl font-serif font-semibold text-earth-800 mb-6 text-center">
         About
       </h2>
       <p className="text-earth-700 leading-relaxed mb-4">

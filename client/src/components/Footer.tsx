@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 gap-8 mb-8">
           <div>
-            <h4 className="font-serif text-lg font-semibold text-white mb-3">
+            <h4 className="font-serif text-2xl font-semibold text-white mb-3">
               Post From Provence
             </h4>
             <p className="text-sm leading-relaxed">
@@ -12,7 +12,7 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h4 className="font-serif text-lg font-semibold text-white mb-3">
+            <h4 className="font-sans text-sm uppercase tracking-wide font-semibold text-white mb-3">
               Connect
             </h4>
             <ul className="text-sm space-y-2">

@@ -15,30 +15,19 @@ pnpm install
 pnpm dev
 ```
 
-## Build & Deploy
+## Deploy
 
-```bash
-pnpm build
-```
+Deploys automatically via Cloudflare Pages' Git integration — every push to
+`main` on [github.com/WaldorfenProvence/PostFromProvence](https://github.com/WaldorfenProvence/PostFromProvence)
+triggers a build and publishes to `postfromprovence.pages.dev`. No manual
+`wrangler` step needed; Cloudflare runs `pnpm install && pnpm build` itself.
 
-### Deploy to Cloudflare Pages (dev)
+Once the `postfromprovence.com` domain is registered, attach it as a custom
+domain on that Cloudflare Pages project — no code changes needed.
 
-```bash
-source ~/.cloudflare-test.env   # same credentials file used by waldorf-en-provence
-npx wrangler pages deploy dist --project-name=postfromprovence-dev
-```
-
-This creates/updates a project at `postfromprovence-dev.pages.dev`, since the
-`postfromprovence.com` domain isn't registered yet. Once you own the domain,
-attach it as a custom domain on this Cloudflare Pages project — no code
-changes needed.
-
-### Deploy to production (once domain is ready)
-
-```bash
-source ~/.cloudflare-prod.env
-npx wrangler pages deploy dist --project-name=postfromprovence
-```
+The `deploy:dev`/`deploy:prod` scripts in `package.json` are a manual
+fallback (local `wrangler` deploy using `~/.cloudflare-school-site.env`
+credentials) — not the normal path, since Git-based deploys handle it.
 
 ## What's Built So Far (Phase 1)
 
@@ -46,9 +35,10 @@ npx wrangler pages deploy dist --project-name=postfromprovence
 - Mail Club content ported from `waldorf-en-provence`'s `MailClubTab.tsx`
 - Color palette carried over from `waldorf-en-provence`'s design tokens
   (`client/src/index.css`)
-- Typeface is a placeholder (`Fraunces` + `Inter`) — swap
-  `--font-serif`/`--font-sans` in `index.css` and the Google Fonts link in
-  `index.html` once a final typeface is chosen
+- Typeface: `Caveat` (handwritten, used sparingly for big display headings
+  and the wordmark) + `Inter` (body copy and small headings, for
+  legibility) — swap `--font-serif`/`--font-sans` in `index.css` and the
+  Google Fonts link in `index.html` if you want to try something else
 - Mail Club "waitlist" signup form is a local-only stub (just flips to a
   thank-you state) — not wired to any backend yet
 - Consulting ("Pick Our Brains") page intentionally left out. To add it
