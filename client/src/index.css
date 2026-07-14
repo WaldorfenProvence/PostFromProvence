@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/*
+  Typeface is a placeholder — swap --font-serif/--font-sans here (and the
+  Google Fonts <link> in index.html) once you've settled on the brand font.
+  Color palette is carried over from waldorf-en-provence's design tokens.
+*/
+@theme {
+  --font-serif: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+  --color-blue-50: #f4f7f2;
+  --color-blue-100: #e6ece1;
+  --color-blue-200: #cddac3;
+  --color-blue-300: #a8c095;
+  --color-blue-400: #82a06e;
+  --color-blue-500: #6b8a5c;
+  --color-blue-600: #5d7052;
+  --color-blue-700: #4a5a41;
+  --color-blue-800: #3c4834;
+  --color-blue-900: #333d2c;
+  --color-warm-50: #fdfcfa;
+  --color-warm-100: #f9f5ef;
+  --color-warm-200: #f0e8db;
+  --color-warm-300: #e4d5c0;
+  --color-warm-400: #d4bb9a;
+  --color-warm-500: #c4a07a;
+  --color-warm-600: #b08560;
+  --color-warm-700: #93694c;
+  --color-warm-800: #785641;
+  --color-warm-900: #634838;
+  --color-earth-700: #5c4a3a;
+  --color-earth-800: #3d3129;
+  --color-earth-900: #2a211b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-earth-800);
+  background-color: var(--color-warm-50);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+}
