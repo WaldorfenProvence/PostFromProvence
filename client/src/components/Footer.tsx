@@ -17,7 +17,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:hello@postfromprovence.com"
-                  className="text-earth-700 hover:text-blue-600 transition-colors"
+                  className="text-earth-700 hover:text-slate-600 transition-colors"
                 >
                   hello@postfromprovence.com
                 </a>

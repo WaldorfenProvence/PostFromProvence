@@ -12,7 +12,7 @@ export default function AboutPage() {
         Questions, or want to get in touch? Email us at{" "}
         <a
           href="mailto:hello@postfromprovence.com"
-          className="text-blue-600 hover:text-blue-500 underline"
+          className="text-slate-600 hover:text-slate-500 underline"
         >
           hello@postfromprovence.com
         </a>

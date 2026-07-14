@@ -8,7 +8,6 @@ import {
   LeafIcon,
   FlowerIcon,
 } from "./OrganicIcons";
-import OrganicDivider from "./OrganicDivider";
 import SubscriptionTiers from "./SubscriptionTiers";
 import FAQSection from "./FAQSection";
 
@@ -26,7 +25,7 @@ export default function HomePage() {
     <div>
       <Hero onCta={scrollToWaitlist} />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-24 sm:space-y-32">
         {/* What's Inside */}
         <section>
           <h2 className="text-3xl sm:text-4xl font-serif text-earth-800 mb-12 text-center">
@@ -80,8 +79,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <OrganicDivider />
-
         {/* Pricing */}
         <section>
           <h2 className="text-3xl font-serif text-earth-800 mb-2 text-center">
@@ -96,7 +93,7 @@ export default function HomePage() {
         {/* Signup Form — placeholder waitlist capture until Stripe Checkout is wired up */}
         <section
           id="waitlist"
-          className="max-w-lg mx-auto text-center mt-16 scroll-mt-24"
+          className="max-w-lg mx-auto text-center scroll-mt-24"
         >
           <h2 className="text-3xl font-serif text-earth-800 mb-4">
             Join the Waitlist
@@ -130,11 +127,11 @@ export default function HomePage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="flex-1 px-4 py-3 rounded-lg border border-warm-300 bg-white text-earth-800 placeholder:text-earth-700/40 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="flex-1 px-4 py-3 rounded-lg border border-warm-300 bg-white text-earth-800 placeholder:text-earth-700/40 focus:outline-none focus:ring-2 focus:ring-slate-400"
               />
               <button
                 type="submit"
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-500 transition-colors cursor-pointer whitespace-nowrap"
+                className="bg-slate-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-500 transition-colors cursor-pointer whitespace-nowrap"
               >
                 Join Waitlist
               </button>
@@ -142,11 +139,7 @@ export default function HomePage() {
           )}
         </section>
 
-        <OrganicDivider />
-
         <FAQSection />
-
-        <OrganicDivider />
 
         {/* Why */}
         <section className="text-center max-w-2xl mx-auto">

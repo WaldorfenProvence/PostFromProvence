@@ -27,7 +27,7 @@ export default function Header({
         <div className="flex items-center gap-6">
           <button
             onClick={joinMailing}
-            className="font-sans font-semibold text-blue-600 hover:text-blue-500 transition-colors cursor-pointer whitespace-nowrap"
+            className="font-sans font-semibold text-slate-600 hover:text-slate-500 transition-colors cursor-pointer whitespace-nowrap"
           >
             Join our mailing!
           </button>
@@ -38,7 +38,7 @@ export default function Header({
                 onClick={() => onNavigate(tab.id)}
                 className={`px-3 sm:px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer ${
                   activeTab === tab.id
-                    ? "bg-blue-600 text-white"
+                    ? "bg-slate-600 text-white"
                     : "text-earth-700 hover:bg-warm-200"
                 }`}
               >

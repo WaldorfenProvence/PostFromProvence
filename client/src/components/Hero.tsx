@@ -12,7 +12,7 @@ export default function Hero({ onCta }: { onCta: () => void }) {
         </p>
         <button
           onClick={onCta}
-          className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-medium transition-colors cursor-pointer"
+          className="bg-slate-600 hover:bg-slate-500 text-white px-6 py-3 rounded-lg font-medium transition-colors cursor-pointer"
         >
           Join the Mail Club
         </button>

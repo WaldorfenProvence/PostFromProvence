@@ -36,7 +36,7 @@ export default function FAQSection() {
                 className="w-full flex items-center justify-between gap-4 text-left px-5 py-4 cursor-pointer bg-warm-100 hover:bg-warm-200 transition-colors"
               >
                 <span className="flex items-center gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-semibold flex items-center justify-center">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-slate-600 text-white text-xs font-semibold flex items-center justify-center">
                     {i + 1}
                   </span>
                   <span className="font-sans font-semibold text-earth-800">
