@@ -40,7 +40,7 @@ export default function Header({
           </button>
           <button
             onClick={joinMailing}
-            className="font-sans font-semibold text-[#6B7A4F] hover:opacity-70 transition-opacity cursor-pointer whitespace-nowrap"
+            className="font-sans font-semibold text-slate-600 hover:text-slate-500 transition-colors cursor-pointer whitespace-nowrap"
           >
             {t.nav.join}
           </button>
@@ -52,7 +52,7 @@ export default function Header({
                 className={`px-3 sm:px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer ${
                   activeTab === tab.id
                     ? "bg-slate-600 text-white"
-                    : "text-[#6B7A4F] hover:bg-warm-200"
+                    : "text-slate-600 hover:bg-warm-200"
                 }`}
               >
                 {tab.label}

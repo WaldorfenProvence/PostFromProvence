@@ -1,9 +1,12 @@
+import PhotoCarousel from "./PhotoCarousel";
+
 export default function AboutPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-24 text-[#6B7A4F]">
       <h2 className="text-4xl sm:text-5xl font-serif mb-6 text-center">
         About
       </h2>
+      <PhotoCarousel />
       <p className="leading-relaxed mb-4">
         We are a community of international families and friends, living
         the slow-life in Provence. We started Post From Provence because
