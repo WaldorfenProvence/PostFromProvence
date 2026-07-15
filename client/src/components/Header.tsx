@@ -60,12 +60,12 @@ export default function Header({
             ))}
           </nav>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-2">
           <button
             onClick={() => setLang("en")}
             aria-label="English"
             aria-pressed={lang === "en"}
-            className={`text-lg leading-none p-1 rounded cursor-pointer transition-opacity ${
+            className={`text-4xl leading-none p-1 rounded cursor-pointer transition-opacity ${
               lang === "en" ? "opacity-100" : "opacity-40 hover:opacity-70"
             }`}
           >
@@ -75,7 +75,7 @@ export default function Header({
             onClick={() => setLang("fr")}
             aria-label="Français"
             aria-pressed={lang === "fr"}
-            className={`text-lg leading-none p-1 rounded cursor-pointer transition-opacity ${
+            className={`text-4xl leading-none p-1 rounded cursor-pointer transition-opacity ${
               lang === "fr" ? "opacity-100" : "opacity-40 hover:opacity-70"
             }`}
           >
