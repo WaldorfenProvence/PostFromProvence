@@ -1,12 +1,33 @@
 export type Lang = "en" | "fr";
 
-export const translations = {
+export type Translations = {
+  nav: { join: string; shop: string; about: string };
+  hero: { subscribeTo: string; intro: string };
+  whatsInside: {
+    heading: string;
+    intro: string;
+    items: string[];
+    envelopeAlt: string;
+  };
+  pricing: { heading: string };
+  why: { heading: string; body: string };
+  waitlist: {
+    heading: string;
+    placeholder: string;
+    button: string;
+    thanks: string;
+  };
+  faq: { heading: string; items: { q: string; a: string }[] };
+  footer: { tagline: string; connect: string };
+};
+
+export const translations: Record<Lang, Translations> = {
   en: {
     nav: { join: "Join our mailing!", shop: "Shop", about: "About" },
     hero: {
       subscribeTo: "Subscribe to",
       intro:
-        "Original art, a seasonal recipe, a letter, and a story — mailed from Provence to your door. A slow, beautiful antidote to the digital flood.",
+        "Original art, a seasonal recipe, a story, and a glimpse into our lives— mailed from our home in Provence to your door. A slow, beautiful antidote to the digital overwhelm.",
     },
     whatsInside: {
       heading: "What's Inside?",
@@ -59,7 +80,7 @@ export const translations = {
     hero: {
       subscribeTo: "Abonnez-vous à",
       intro:
-        "Une œuvre d'art originale, une recette de saison, une lettre et une histoire — envoyées de Provence jusqu'à votre porte. Un antidote lent et beau au flot numérique.",
+        "Une œuvre d'art originale, une recette de saison, une histoire, et un aperçu de notre vie — envoyés de notre maison en Provence jusqu'à votre porte. Un antidote lent et beau au trop-plein numérique.",
     },
     whatsInside: {
       heading: "Que contient l'enveloppe ?",
@@ -107,4 +128,4 @@ export const translations = {
       connect: "Contact",
     },
   },
-} as const;
+};
