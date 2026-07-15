@@ -4,10 +4,12 @@ import { LeafIcon } from "./OrganicIcons";
 import StripedBlock from "./StripedBlock";
 import SubscriptionTiers from "./SubscriptionTiers";
 import FAQSection from "./FAQSection";
+import { useLanguage } from "../LanguageContext";
 
 const ICON_COLOR = "#cdb42d";
 
 export default function HomePage() {
+  const { t } = useLanguage();
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -19,27 +21,19 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24 space-y-20">
           {/* What's Inside */}
           <section className="bg-white/85 rounded-2xl p-6 sm:p-10 font-serif text-[#6B7A4F]">
-            <h2 className="text-3xl mb-8 text-center">
-              What's Inside?
-            </h2>
+            <h2 className="text-3xl mb-8 text-center">{t.whatsInside.heading}</h2>
             <div className="flex flex-col sm:flex-row items-center gap-8 sm:gap-12">
               <img
                 src="/envelope-treasures.png"
-                alt="5 Treasures of the Season"
+                alt={t.whatsInside.envelopeAlt}
                 className="w-56 sm:w-64 flex-shrink-0 h-auto"
               />
               <div>
-                <p className="mb-3">
-                  Each month, receive a handcrafted post from our home in
-                  Provence — filled with:
-                </p>
+                <p className="mb-3">{t.whatsInside.intro}</p>
                 <ul className="space-y-1.5">
-                  <li>• Original watercolour art</li>
-                  <li>• Seasonal recipe</li>
-                  <li>• An installment of our children's story</li>
-                  <li>• A monthly surprise</li>
-                  <li>• A letter from our community</li>
-                  <li>• All in French and English</li>
+                  {t.whatsInside.items.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -48,7 +42,7 @@ export default function HomePage() {
           {/* Pricing */}
           <section>
             <h2 className="text-3xl sm:text-4xl font-serif text-terracotta-600 mb-10 text-center">
-              Choose Your Subscription…
+              {t.pricing.heading}
             </h2>
             <SubscriptionTiers />
           </section>
@@ -58,13 +52,8 @@ export default function HomePage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-20">
         {/* Why */}
         <section className="text-center max-w-2xl mx-auto font-serif text-[#6B7A4F]">
-          <h2 className="text-2xl mb-4">Why Mail Club?</h2>
-          <p className="leading-relaxed">
-            In a world of infinite scroll, there is something radical about
-            receiving a physical envelope. Something handmade, seasonal, and
-            finite. Each one is a small act of resistance against the
-            disposable and the digital.
-          </p>
+          <h2 className="text-2xl mb-4">{t.why.heading}</h2>
+          <p className="leading-relaxed">{t.why.body}</p>
         </section>
 
         {/* Signup Form — placeholder waitlist capture until Stripe Checkout is wired up */}
@@ -73,7 +62,7 @@ export default function HomePage() {
           className="max-w-lg mx-auto text-center scroll-mt-24"
         >
           <h2 className="text-3xl font-serif text-earth-800 mb-6">
-            Now Taking Subscriptions For Our Inaugural Post!
+            {t.waitlist.heading}
           </h2>
 
           {submitted ? (
@@ -81,9 +70,7 @@ export default function HomePage() {
               <div className="flex justify-center mb-2">
                 <LeafIcon color={ICON_COLOR} size={28} />
               </div>
-              <p className="text-blue-700 font-medium">
-                Thank you! We'll be in touch soon.
-              </p>
+              <p className="text-blue-700 font-medium">{t.waitlist.thanks}</p>
             </div>
           ) : (
             <form
@@ -98,14 +85,14 @@ export default function HomePage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
+                placeholder={t.waitlist.placeholder}
                 className="flex-1 px-4 py-3 rounded-lg border border-warm-300 bg-white text-earth-800 placeholder:text-earth-700/40 focus:outline-none focus:ring-2 focus:ring-slate-400"
               />
               <button
                 type="submit"
                 className="bg-slate-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-500 transition-colors cursor-pointer whitespace-nowrap"
               >
-                Subscribe Now
+                {t.waitlist.button}
               </button>
             </form>
           )}

@@ -6,6 +6,7 @@ import AboutPage from "./components/AboutPage";
 import Footer from "./components/Footer";
 import StripeBorders from "./components/StripeBorders";
 import StripeRibbon from "./components/StripeRibbon";
+import { LanguageProvider } from "./LanguageContext";
 
 // Consulting ("Pick Our Brains") is deliberately left out for now — to add
 // it back later, add "consulting" here and to the nav array in Header.tsx,
@@ -37,16 +38,18 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col">
-      <StripeBorders />
-      <Header activeTab={activeTab} onNavigate={changeTab} />
-      <main className="flex-1">
-        {activeTab === "home" && <HomePage />}
-        {activeTab === "shop" && <ShopComingSoon />}
-        {activeTab === "about" && <AboutPage />}
-      </main>
-      <Footer />
-      <StripeRibbon flip />
-    </div>
+    <LanguageProvider>
+      <div className="relative min-h-screen flex flex-col">
+        <StripeBorders />
+        <Header activeTab={activeTab} onNavigate={changeTab} />
+        <main className="flex-1">
+          {activeTab === "home" && <HomePage />}
+          {activeTab === "shop" && <ShopComingSoon />}
+          {activeTab === "about" && <AboutPage />}
+        </main>
+        <Footer />
+        <StripeRibbon flip />
+      </div>
+    </LanguageProvider>
   );
 }

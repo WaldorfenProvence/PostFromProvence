@@ -1,4 +1,5 @@
 import type { Tab } from "../App";
+import { useLanguage } from "../LanguageContext";
 
 export default function Header({
   activeTab,
@@ -7,10 +8,12 @@ export default function Header({
   activeTab: Tab;
   onNavigate: (tab: Tab) => void;
 }) {
+  const { lang, setLang, t } = useLanguage();
+
   // To bring back the consulting page later: add { id: "consulting", label: "Pick Our Brains" } here.
   const tabs: { id: Tab; label: string }[] = [
-    { id: "shop", label: "Shop" },
-    { id: "about", label: "About" },
+    { id: "shop", label: t.nav.shop },
+    { id: "about", label: t.nav.about },
   ];
 
   const joinMailing = () => {
@@ -24,12 +27,12 @@ export default function Header({
   return (
     <header className="sticky top-0 z-40 bg-warm-50/95 backdrop-blur-sm border-b border-warm-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4 sm:gap-6">
           <button
             onClick={joinMailing}
             className="font-sans font-semibold text-slate-600 hover:text-slate-500 transition-colors cursor-pointer whitespace-nowrap"
           >
-            Join our mailing!
+            {t.nav.join}
           </button>
           <nav className="hidden sm:flex items-center gap-1 sm:gap-2">
             {tabs.map((tab) => (
@@ -46,6 +49,28 @@ export default function Header({
               </button>
             ))}
           </nav>
+          <div className="flex items-center gap-1 border-l border-warm-200 pl-4 sm:pl-6">
+            <button
+              onClick={() => setLang("en")}
+              aria-label="English"
+              aria-pressed={lang === "en"}
+              className={`text-lg leading-none p-1 rounded cursor-pointer transition-opacity ${
+                lang === "en" ? "opacity-100" : "opacity-40 hover:opacity-70"
+              }`}
+            >
+              🇬🇧
+            </button>
+            <button
+              onClick={() => setLang("fr")}
+              aria-label="Français"
+              aria-pressed={lang === "fr"}
+              className={`text-lg leading-none p-1 rounded cursor-pointer transition-opacity ${
+                lang === "fr" ? "opacity-100" : "opacity-40 hover:opacity-70"
+              }`}
+            >
+              🇫🇷
+            </button>
+          </div>
         </div>
         <button
           onClick={() => onNavigate("home")}
