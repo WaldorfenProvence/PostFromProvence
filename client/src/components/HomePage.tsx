@@ -18,7 +18,7 @@ export default function HomePage() {
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24 space-y-20">
           {/* What's Inside */}
-          <section className="bg-white/85 rounded-2xl p-6 sm:p-10 font-serif text-[#2B3327]">
+          <section className="bg-white/85 rounded-2xl p-6 sm:p-10 font-serif text-[#6B7A4F]">
             <h2 className="text-3xl mb-8 text-center">
               What's Inside?
             </h2>
@@ -57,11 +57,9 @@ export default function HomePage() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-20">
         {/* Why */}
-        <section className="text-center max-w-2xl mx-auto">
-          <h2 className="text-2xl font-serif text-earth-800 mb-4">
-            Why Mail Club?
-          </h2>
-          <p className="text-earth-700 leading-relaxed">
+        <section className="text-center max-w-2xl mx-auto font-serif text-[#6B7A4F]">
+          <h2 className="text-2xl mb-4">Why Mail Club?</h2>
+          <p className="leading-relaxed">
             In a world of infinite scroll, there is something radical about
             receiving a physical envelope. Something handmade, seasonal, and
             finite. Each one is a small act of resistance against the
@@ -74,14 +72,9 @@ export default function HomePage() {
           id="waitlist"
           className="max-w-lg mx-auto text-center scroll-mt-24"
         >
-          <h2 className="text-3xl font-serif text-earth-800 mb-4">
-            Join the Waitlist
+          <h2 className="text-3xl font-serif text-earth-800 mb-6">
+            Now Taking Subscriptions For Our Inaugural Post!
           </h2>
-          <p className="text-earth-700 mb-6 text-sm">
-            We're preparing our first packets now. Sign up to be notified
-            when subscriptions open — early subscribers will receive a
-            special inaugural edition.
-          </p>
 
           {submitted ? (
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
@@ -112,7 +105,7 @@ export default function HomePage() {
                 type="submit"
                 className="bg-slate-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-500 transition-colors cursor-pointer whitespace-nowrap"
               >
-                Join Waitlist
+                Subscribe Now
               </button>
             </form>
           )}
