@@ -7,16 +7,6 @@ export default function Footer() {
     <footer className="py-12 mt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center gap-8">
         <div>
-          <img
-            src="/wordmark.png"
-            alt="Post From Provence"
-            className="h-10 w-auto mb-3 mx-auto"
-          />
-          <p className="text-sm leading-relaxed text-earth-700">
-            {t.footer.tagline}
-          </p>
-        </div>
-        <div>
           <h4 className="font-sans text-sm uppercase tracking-wide font-semibold text-earth-800 mb-3">
             {t.footer.connect}
           </h4>
@@ -26,6 +16,16 @@ export default function Footer() {
           >
             hello@postfromprovence.com
           </a>
+        </div>
+        <div>
+          <img
+            src="/wordmark.png"
+            alt="Post From Provence"
+            className="h-10 w-auto mb-3 mx-auto"
+          />
+          <p className="text-sm leading-relaxed text-earth-700">
+            {t.footer.tagline}
+          </p>
         </div>
         <div className="w-full border-t border-warm-200 pt-6 text-xs text-earth-700/70">
           <p>&copy; {new Date().getFullYear()} Post From Provence.</p>
