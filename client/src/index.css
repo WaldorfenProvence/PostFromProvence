@@ -1,15 +1,14 @@
 @import "tailwindcss";
 
 /*
-  --font-serif is a typewriter display face, used for big statement
-  headings (hero, section titles) so it reads like a typed letter. Small
-  headings (card titles, footer labels) use --font-sans at a heavier
-  weight instead, since Special Elite only ships one weight and gets hard
-  to read at small sizes.
+  Special Elite (typewriter) is used site-wide for both --font-serif and
+  --font-sans, so every element renders in it regardless of which utility
+  class it uses. It only ships one weight — bold/semibold classes have no
+  visual effect where this is applied.
 */
 @theme {
   --font-serif: "Special Elite", cursive;
-  --font-sans: "Inter", sans-serif;
+  --font-sans: "Special Elite", cursive;
   --color-slate-50: #f2f5f7;
   --color-slate-100: #e2e8ec;
   --color-slate-200: #c7d3da;
