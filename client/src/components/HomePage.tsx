@@ -2,7 +2,6 @@ import { useState } from "react";
 import Hero from "./Hero";
 import { LeafIcon } from "./OrganicIcons";
 import StripedBlock from "./StripedBlock";
-import Envelope from "./Envelope";
 import SubscriptionTiers from "./SubscriptionTiers";
 import FAQSection from "./FAQSection";
 
@@ -24,7 +23,11 @@ export default function HomePage() {
               What's Inside?
             </h2>
             <div className="flex flex-col sm:flex-row items-center gap-8 sm:gap-12">
-              <Envelope label="5 Treasures of the Season" className="w-56 sm:w-64 flex-shrink-0" />
+              <img
+                src="/envelope-treasures.png"
+                alt="5 Treasures of the Season"
+                className="w-56 sm:w-64 flex-shrink-0 h-auto"
+              />
               <div>
                 <p className="text-earth-700 mb-3">
                   Each month, receive a handcrafted post from our home in
