@@ -43,7 +43,7 @@ export default function App() {
         <StripeBorders />
         <Header activeTab={activeTab} onNavigate={changeTab} />
         <main className="flex-1">
-          {activeTab === "home" && <HomePage />}
+          {activeTab === "home" && <HomePage onNavigate={changeTab} />}
           {activeTab === "shop" && <ShopComingSoon />}
           {activeTab === "about" && <AboutPage />}
         </main>

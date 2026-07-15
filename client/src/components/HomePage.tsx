@@ -1,16 +1,16 @@
-import { useState } from "react";
 import Hero from "./Hero";
-import { LeafIcon } from "./OrganicIcons";
 import StripedBlock from "./StripedBlock";
 import SubscriptionTiers from "./SubscriptionTiers";
 import FAQSection from "./FAQSection";
 import { useLanguage } from "../LanguageContext";
+import type { Tab } from "../App";
 
-const ICON_COLOR = "#cdb42d";
-
-export default function HomePage() {
+export default function HomePage({
+  onNavigate,
+}: {
+  onNavigate: (tab: Tab) => void;
+}) {
   const { t } = useLanguage();
-  const [submitted, setSubmitted] = useState(false);
 
   return (
     <div>
@@ -55,7 +55,7 @@ export default function HomePage() {
           <p className="leading-relaxed">{t.why.body}</p>
         </section>
 
-        {/* Signup Form — placeholder waitlist capture until Stripe Checkout is wired up */}
+        {/* CTA — sends to the shop, which will handle actual checkout */}
         <section
           id="waitlist"
           className="max-w-lg mx-auto text-center scroll-mt-24"
@@ -64,21 +64,12 @@ export default function HomePage() {
             {t.waitlist.heading}
           </h2>
 
-          {submitted ? (
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-              <div className="flex justify-center mb-2">
-                <LeafIcon color={ICON_COLOR} size={28} />
-              </div>
-              <p className="text-blue-700 font-medium">{t.waitlist.thanks}</p>
-            </div>
-          ) : (
-            <button
-              onClick={() => setSubmitted(true)}
-              className="bg-slate-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-slate-500 transition-colors cursor-pointer"
-            >
-              {t.waitlist.button}
-            </button>
-          )}
+          <button
+            onClick={() => onNavigate("shop")}
+            className="bg-slate-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-slate-500 transition-colors cursor-pointer"
+          >
+            {t.waitlist.button}
+          </button>
         </section>
 
         <FAQSection />
