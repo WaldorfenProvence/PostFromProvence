@@ -10,7 +10,7 @@ export default function StripeBorders() {
         style={{
           backgroundImage: "url(/stripes-clean.png)",
           backgroundRepeat: "repeat-y",
-          backgroundSize: "176px auto",
+          backgroundSize: "379px 384px",
         }}
       />
       {/* right */}
@@ -19,7 +19,7 @@ export default function StripeBorders() {
         style={{
           backgroundImage: "url(/stripes-clean.png)",
           backgroundRepeat: "repeat-y",
-          backgroundSize: "176px auto",
+          backgroundSize: "379px 384px",
           transform: "scaleX(-1)",
         }}
       />

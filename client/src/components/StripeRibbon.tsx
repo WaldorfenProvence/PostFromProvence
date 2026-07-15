@@ -6,7 +6,7 @@ export default function StripeRibbon({ flip = false }: { flip?: boolean }) {
       style={{
         backgroundImage: "url(/stripes-clean-horizontal.png)",
         backgroundRepeat: "repeat-x",
-        backgroundSize: "auto 200px",
+        backgroundSize: "384px 379px",
         transform: flip ? "scaleY(-1)" : undefined,
       }}
     />
