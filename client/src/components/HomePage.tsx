@@ -18,8 +18,8 @@ export default function HomePage() {
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24 space-y-20">
           {/* What's Inside */}
-          <section className="bg-white/85 rounded-2xl p-6 sm:p-10">
-            <h2 className="text-3xl font-serif text-earth-800 mb-8 text-center">
+          <section className="bg-white/85 rounded-2xl p-6 sm:p-10 font-serif text-[#2B3327]">
+            <h2 className="text-3xl mb-8 text-center">
               What's Inside?
             </h2>
             <div className="flex flex-col sm:flex-row items-center gap-8 sm:gap-12">
@@ -29,11 +29,11 @@ export default function HomePage() {
                 className="w-56 sm:w-64 flex-shrink-0 h-auto"
               />
               <div>
-                <p className="text-earth-700 mb-3">
+                <p className="mb-3">
                   Each month, receive a handcrafted post from our home in
                   Provence — filled with:
                 </p>
-                <ul className="space-y-1.5 text-earth-800">
+                <ul className="space-y-1.5">
                   <li>• Original watercolour art</li>
                   <li>• Seasonal recipe</li>
                   <li>• An installment of our children's story</li>

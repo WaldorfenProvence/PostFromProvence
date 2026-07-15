@@ -8,18 +8,18 @@ export default function StripeBorders() {
       <div
         className="absolute inset-y-0 left-0 w-44 opacity-70"
         style={{
-          backgroundImage: "url(/stripes.png)",
+          backgroundImage: "url(/stripes-clean.png)",
           backgroundRepeat: "repeat-y",
-          backgroundSize: "200px auto",
+          backgroundSize: "176px auto",
         }}
       />
       {/* right */}
       <div
         className="absolute inset-y-0 right-0 w-44 opacity-70"
         style={{
-          backgroundImage: "url(/stripes.png)",
+          backgroundImage: "url(/stripes-clean.png)",
           backgroundRepeat: "repeat-y",
-          backgroundSize: "200px auto",
+          backgroundSize: "176px auto",
           transform: "scaleX(-1)",
         }}
       />

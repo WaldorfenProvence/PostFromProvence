@@ -9,9 +9,9 @@ export default function StripedBlock({
     <div
       className="relative"
       style={{
-        backgroundImage: "url(/stripes.png)",
+        backgroundImage: "url(/stripes-clean.png)",
         backgroundRepeat: "repeat",
-        backgroundSize: "200px auto",
+        backgroundSize: "379px 384px",
       }}
     >
       {children}
