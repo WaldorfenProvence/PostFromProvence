@@ -1,4 +1,5 @@
 import { useLanguage } from "../LanguageContext";
+import SocialIcons from "./SocialIcons";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -17,6 +18,7 @@ export default function Footer() {
             hello@postfromprovence.com
           </a>
         </div>
+        <SocialIcons />
         <div>
           <img
             src="/wordmark.png"

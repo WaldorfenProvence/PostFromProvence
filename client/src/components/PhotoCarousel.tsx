@@ -1,23 +1,31 @@
 import { useEffect, useState } from "react";
+import { LeafIcon } from "./OrganicIcons";
 
-const PHOTOS = [
-  { src: "/about/main_building.webp", alt: "Our home in Provence" },
-  { src: "/about/garden_trees.webp", alt: "The garden" },
-  { src: "/about/terrace_upper.webp", alt: "The upper terrace" },
-  { src: "/about/archway_courtyard.webp", alt: "The courtyard archway" },
-  { src: "/about/aerial_garden_view.webp", alt: "Aerial view of the garden" },
-];
+// Add real photos here once available — each needs a file in
+// client/public/about/ and an entry below. Empty array shows a
+// "coming soon" placeholder instead of the carousel.
+const PHOTOS: { src: string; alt: string }[] = [];
 
 export default function PhotoCarousel() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    if (PHOTOS.length === 0) return;
     const id = setInterval(
       () => setIndex((i) => (i + 1) % PHOTOS.length),
       4000
     );
     return () => clearInterval(id);
   }, []);
+
+  if (PHOTOS.length === 0) {
+    return (
+      <div className="mb-10 aspect-[16/10] rounded-2xl bg-warm-100 border border-warm-200 flex flex-col items-center justify-center gap-2 text-[#6B7A4F]">
+        <LeafIcon color="#cdb42d" size={32} />
+        <p className="text-sm">Photos coming soon</p>
+      </div>
+    );
+  }
 
   return (
     <div className="mb-10">
