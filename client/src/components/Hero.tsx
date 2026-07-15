@@ -13,7 +13,7 @@ export default function Hero() {
             className="h-28 sm:h-44 w-auto inline-block"
           />
         </h1>
-        <p className="text-xl sm:text-2xl text-earth-700 leading-relaxed">
+        <p className="text-xl sm:text-2xl text-[#6B7A4F] leading-relaxed">
           {t.hero.intro}
         </p>
       </div>

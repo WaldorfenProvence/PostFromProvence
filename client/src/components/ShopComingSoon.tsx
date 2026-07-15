@@ -2,14 +2,14 @@ import { PaletteIcon } from "./OrganicIcons";
 
 export default function ShopComingSoon() {
   return (
-    <div className="max-w-2xl mx-auto px-4 sm:px-6 py-24 text-center">
+    <div className="max-w-2xl mx-auto px-4 sm:px-6 py-24 text-center text-[#6B7A4F]">
       <div className="flex justify-center mb-4">
         <PaletteIcon color="#cdb42d" size={40} />
       </div>
-      <h2 className="text-4xl sm:text-5xl font-serif text-earth-800 mb-4">
+      <h2 className="text-4xl sm:text-5xl font-serif mb-4">
         Shop — Coming Soon
       </h2>
-      <p className="text-earth-700 leading-relaxed">
+      <p className="leading-relaxed">
         We're working on a small catalog of prints and paper goods inspired
         by each month's Mail Club packet. Join the waitlist on the home
         page to hear when it launches.

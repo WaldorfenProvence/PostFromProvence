@@ -39,8 +39,8 @@ export default function HomePage({
           </section>
 
           {/* Pricing */}
-          <section>
-            <h2 className="text-3xl sm:text-4xl font-serif text-terracotta-600 mb-10 text-center">
+          <section id="pricing" className="scroll-mt-24">
+            <h2 className="text-3xl sm:text-4xl font-serif text-[#6B7A4F] mb-10 text-center">
               {t.pricing.heading}
             </h2>
             <SubscriptionTiers />
