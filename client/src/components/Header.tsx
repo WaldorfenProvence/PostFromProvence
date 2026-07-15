@@ -29,6 +29,16 @@ export default function Header({
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4 sm:gap-6">
           <button
+            onClick={() => onNavigate("home")}
+            className="flex items-center cursor-pointer"
+          >
+            <img
+              src="/wordmark.png"
+              alt="Post From Provence"
+              className="h-9 sm:h-10 w-auto"
+            />
+          </button>
+          <button
             onClick={joinMailing}
             className="font-sans font-semibold text-slate-600 hover:text-slate-500 transition-colors cursor-pointer whitespace-nowrap"
           >
@@ -49,39 +59,29 @@ export default function Header({
               </button>
             ))}
           </nav>
-          <div className="flex items-center gap-1 border-l border-warm-200 pl-4 sm:pl-6">
-            <button
-              onClick={() => setLang("en")}
-              aria-label="English"
-              aria-pressed={lang === "en"}
-              className={`text-lg leading-none p-1 rounded cursor-pointer transition-opacity ${
-                lang === "en" ? "opacity-100" : "opacity-40 hover:opacity-70"
-              }`}
-            >
-              🇬🇧
-            </button>
-            <button
-              onClick={() => setLang("fr")}
-              aria-label="Français"
-              aria-pressed={lang === "fr"}
-              className={`text-lg leading-none p-1 rounded cursor-pointer transition-opacity ${
-                lang === "fr" ? "opacity-100" : "opacity-40 hover:opacity-70"
-              }`}
-            >
-              🇫🇷
-            </button>
-          </div>
         </div>
-        <button
-          onClick={() => onNavigate("home")}
-          className="flex items-center cursor-pointer"
-        >
-          <img
-            src="/wordmark.png"
-            alt="Post From Provence"
-            className="h-9 sm:h-10 w-auto"
-          />
-        </button>
+        <div className="flex items-center gap-1">
+          <button
+            onClick={() => setLang("en")}
+            aria-label="English"
+            aria-pressed={lang === "en"}
+            className={`text-lg leading-none p-1 rounded cursor-pointer transition-opacity ${
+              lang === "en" ? "opacity-100" : "opacity-40 hover:opacity-70"
+            }`}
+          >
+            🇬🇧
+          </button>
+          <button
+            onClick={() => setLang("fr")}
+            aria-label="Français"
+            aria-pressed={lang === "fr"}
+            className={`text-lg leading-none p-1 rounded cursor-pointer transition-opacity ${
+              lang === "fr" ? "opacity-100" : "opacity-40 hover:opacity-70"
+            }`}
+          >
+            🇫🇷
+          </button>
+        </div>
       </div>
     </header>
   );
