@@ -10,7 +10,6 @@ const ICON_COLOR = "#cdb42d";
 
 export default function HomePage() {
   const { t } = useLanguage();
-  const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   return (
@@ -61,7 +60,7 @@ export default function HomePage() {
           id="waitlist"
           className="max-w-lg mx-auto text-center scroll-mt-24"
         >
-          <h2 className="text-3xl font-serif text-earth-800 mb-6">
+          <h2 className="text-3xl font-serif text-[#6B7A4F] mb-6">
             {t.waitlist.heading}
           </h2>
 
@@ -73,28 +72,12 @@ export default function HomePage() {
               <p className="text-blue-700 font-medium">{t.waitlist.thanks}</p>
             </div>
           ) : (
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSubmitted(true);
-              }}
-              className="flex flex-col sm:flex-row gap-3 justify-center"
+            <button
+              onClick={() => setSubmitted(true)}
+              className="bg-slate-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-slate-500 transition-colors cursor-pointer"
             >
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder={t.waitlist.placeholder}
-                className="flex-1 px-4 py-3 rounded-lg border border-warm-300 bg-white text-earth-800 placeholder:text-earth-700/40 focus:outline-none focus:ring-2 focus:ring-slate-400"
-              />
-              <button
-                type="submit"
-                className="bg-slate-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-500 transition-colors cursor-pointer whitespace-nowrap"
-              >
-                {t.waitlist.button}
-              </button>
-            </form>
+              {t.waitlist.button}
+            </button>
           )}
         </section>
 

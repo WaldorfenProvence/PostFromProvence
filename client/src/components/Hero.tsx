@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative py-16 sm:py-20">
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <h1 className="flex flex-wrap items-center justify-center gap-4 text-3xl sm:text-5xl font-serif leading-tight text-earth-800 mb-6">
+        <h1 className="flex flex-wrap items-center justify-center gap-4 text-3xl sm:text-5xl font-serif leading-tight text-[#6B7A4F] mb-6">
           {t.hero.subscribeTo}
           <img
             src="/wordmark.png"
