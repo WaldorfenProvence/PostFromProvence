@@ -5,8 +5,32 @@ export default function AboutPage() {
         About
       </h2>
       <p className="leading-relaxed mb-4">
-        Post From Provence is a small, handmade mail club — each month's
-        packet is put together and sent from our home in Provence.
+        We are a community of international families and friends, living
+        the slow-life in Provence. We started Post From Provence because
+        we wanted to share the essence of what is beautiful here; the
+        passing of the seasons, the fresh produce, the slower pace and
+        attention to living by the rhythm of nature.
+      </p>
+      <p className="leading-relaxed mb-4">
+        We were brought together by our{" "}
+        <a
+          href="https://waldorf-en-provence-school-site.pages.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:opacity-70 transition-opacity"
+        >
+          little school
+        </a>{" "}
+        and now we have formed a community of shared values and firm
+        friendships raising our families together in this very special
+        place.
+      </p>
+      <p className="leading-relaxed mb-4">
+        All proceeds from our work here at Post from Provence go directly
+        to supporting our independant co-operative school close to
+        Aix-en-Provence. We hope you enjoy our handmade offerings drawing
+        on the richness of the talents in our community. We welcome you
+        along on our journey.
       </p>
       <p className="leading-relaxed">
         Questions, or want to get in touch? Email us at{" "}
