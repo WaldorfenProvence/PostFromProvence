@@ -54,3 +54,20 @@ body {
   background-color: #ffffff;
 }
 
+@keyframes pfp-orbit {
+  0% { transform: translate(-50%, -50%) translate(92px, 0); }
+  12.5% { transform: translate(-50%, -50%) translate(65px, 65px); }
+  25% { transform: translate(-50%, -50%) translate(0, 92px); }
+  37.5% { transform: translate(-50%, -50%) translate(-65px, 65px); }
+  50% { transform: translate(-50%, -50%) translate(-92px, 0); }
+  62.5% { transform: translate(-50%, -50%) translate(-65px, -65px); }
+  75% { transform: translate(-50%, -50%) translate(0, -92px); }
+  87.5% { transform: translate(-50%, -50%) translate(65px, -65px); }
+  100% { transform: translate(-50%, -50%) translate(92px, 0); }
+}
+
+@keyframes pfp-wiggle {
+  0%, 100% { transform: rotate(-7deg); }
+  50% { transform: rotate(7deg); }
+}
+

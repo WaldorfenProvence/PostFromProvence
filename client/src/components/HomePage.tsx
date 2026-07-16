@@ -4,6 +4,7 @@ import StripedBlock from "./StripedBlock";
 import SubscriptionTiers from "./SubscriptionTiers";
 import FAQSection from "./FAQSection";
 import AboutTab from "./AboutTab";
+import AnimatedTreasures from "./AnimatedTreasures";
 import { useLanguage } from "../LanguageContext";
 import type { Tab } from "../App";
 
@@ -43,11 +44,7 @@ export default function HomePage({
           <section className="bg-white/85 rounded-2xl p-6 sm:p-10 font-serif text-[#6B7A4F]">
             <h2 className="text-5xl sm:text-6xl mb-10 text-center">{t.whatsInside.heading}</h2>
             <div className="flex flex-col sm:flex-row items-center gap-8 sm:gap-12">
-              <img
-                src="/envelope-treasures.png"
-                alt={t.whatsInside.envelopeAlt}
-                className="w-64 sm:w-72 flex-shrink-0 h-auto"
-              />
+              <AnimatedTreasures alt={t.whatsInside.envelopeAlt} />
               <div className="text-lg sm:text-xl">
                 <p className="mb-3">{t.whatsInside.intro}</p>
                 <ul className="space-y-2">
