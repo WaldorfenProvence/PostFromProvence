@@ -19,6 +19,15 @@ export type Translations = {
   };
   faq: { heading: string; items: { q: string; a: string }[] };
   footer: { tagline: string; connect: string };
+  about: {
+    heading: string;
+    intro: string;
+    school: string;
+    schoolLinkText: string;
+    schoolRest: string;
+    proceeds: string;
+    contact: string;
+  };
 };
 
 export const translations: Record<Lang, Translations> = {
@@ -74,6 +83,18 @@ export const translations: Record<Lang, Translations> = {
       tagline: "A monthly mail club sent from our home in Provence, France to yours.",
       connect: "Connect",
     },
+    about: {
+      heading: "About",
+      intro:
+        "We are a community of international families and friends, living the slow-life in Provence. We started Post From Provence because we wanted to share the essence of what is beautiful here; the passing of the seasons, the fresh produce, the slower pace and attention to living by the rhythm of nature.",
+      school: "We were brought together by our",
+      schoolLinkText: "little school",
+      schoolRest:
+        "and now we have formed a community of shared values and firm friendships raising our families together in this very special place.",
+      proceeds:
+        "All proceeds from our work here at Post from Provence go directly to supporting our independant co-operative school close to Aix-en-Provence. We hope you enjoy our handmade offerings drawing on the richness of the talents in our community. We welcome you along on our journey.",
+      contact: "Questions, or want to get in touch? Email us at",
+    },
   },
   fr: {
     nav: { join: "Rejoignez notre liste !", shop: "Boutique", about: "À propos" },
@@ -126,6 +147,18 @@ export const translations: Record<Lang, Translations> = {
     footer: {
       tagline: "Un club postal mensuel envoyé de notre maison en Provence, France, jusqu'à la vôtre.",
       connect: "Contact",
+    },
+    about: {
+      heading: "À propos",
+      intro:
+        "Nous sommes une communauté de familles et d'amis internationaux, vivant la vie lente en Provence. Nous avons créé Post From Provence parce que nous voulions partager l'essence de ce qui est beau ici ; le passage des saisons, les produits frais, le rythme plus lent et l'attention portée à vivre au rythme de la nature.",
+      school: "Nous avons été réunis par notre",
+      schoolLinkText: "petite école",
+      schoolRest:
+        "et nous avons désormais formé une communauté de valeurs partagées et d'amitiés solides, élevant nos familles ensemble dans ce lieu si particulier.",
+      proceeds:
+        "Tous les bénéfices de notre travail chez Post from Provence vont directement au soutien de notre école coopérative indépendante près d'Aix-en-Provence. Nous espérons que vous apprécierez nos créations artisanales qui puisent dans la richesse des talents de notre communauté. Nous vous accueillons avec plaisir dans notre aventure.",
+      contact: "Des questions, ou envie de nous contacter ? Écrivez-nous à",
     },
   },
 };
