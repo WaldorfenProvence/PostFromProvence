@@ -17,16 +17,14 @@ export default function HomePage({
   const [showAboutTab, setShowAboutTab] = useState(false);
 
   useEffect(() => {
-    const marker = markerRef.current;
-    if (!marker) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setShowAboutTab(!entry.isIntersecting && entry.boundingClientRect.top < 0);
-      },
-      { threshold: 0 }
-    );
-    observer.observe(marker);
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      const marker = markerRef.current;
+      if (!marker) return;
+      setShowAboutTab(marker.getBoundingClientRect().top < 0);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -38,7 +36,7 @@ export default function HomePage({
 
         {/* Marks the boundary just below the hero intro — the About Us
             tab appears once this scrolls above the viewport. */}
-        <div ref={markerRef} />
+        <div ref={markerRef} className="h-px" />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24 space-y-20">
           {/* What's Inside */}
