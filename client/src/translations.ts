@@ -67,7 +67,7 @@ export const translations: Record<Lang, Translations> = {
       items: [
         {
           q: "When will I receive my post?",
-          a: "We mail Post From Provence around the 15th of every month. Join before then and you'll get that month's post; join after, and your first post arrives the following month.",
+          a: "We mail Post From Provence around the 15th of every month. Join before the 10th and you'll get that month's post; join after, and your first post arrives the following month.",
         },
         {
           q: "How do I cancel or update my address?",
@@ -132,7 +132,7 @@ export const translations: Record<Lang, Translations> = {
       items: [
         {
           q: "Quand vais-je recevoir mon courrier ?",
-          a: "Nous envoyons Post From Provence vers le 15 de chaque mois. Inscrivez-vous avant cette date pour recevoir le courrier du mois ; après, votre premier envoi arrivera le mois suivant.",
+          a: "Nous envoyons Post From Provence vers le 15 de chaque mois. Inscrivez-vous avant le 10 pour recevoir le courrier du mois ; après, votre premier envoi arrivera le mois suivant.",
         },
         {
           q: "Comment annuler ou modifier mon adresse ?",
