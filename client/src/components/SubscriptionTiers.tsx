@@ -9,7 +9,7 @@ export default function SubscriptionTiers({
   const { t } = useLanguage();
 
   const REGIONS: { label: string; img: string; tab: Tab }[] = [
-    { label: t.subscribe.euTileLabel, img: "/envelope-monthly.png", tab: "subscribe-eu" },
+    { label: t.subscribe.euTileLabel, img: "/envelope-france.svg", tab: "subscribe-eu" },
     { label: t.subscribe.intlTileLabel, img: "/envelope-international.png", tab: "subscribe-intl" },
   ];
 
