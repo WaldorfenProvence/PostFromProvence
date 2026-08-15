@@ -1,9 +1,13 @@
+const SHOP_BASE = "https://qjndqv-1b.myshopify.com/products";
+
 const TIERS = [
-  { label: "Monthly", img: "/envelope-monthly.png" },
-  { label: "International", img: "/envelope-international.png" },
-  { label: "6 Months", img: "/envelope-6months.png" },
-  { label: "12 Months", img: "/envelope-12months.png" },
+  { label: "Monthly", img: "/envelope-monthly.png", href: `${SHOP_BASE}/post-from-provence-mail-club` },
+  { label: "International", img: "/envelope-international.png", href: `${SHOP_BASE}/post-from-provence-mail-club-outside-of-the-eu` },
+  { label: "6 Months", img: "/envelope-6months.png", href: `${SHOP_BASE}/post-from-provence-mail-club` },
+  { label: "12 Months", img: "/envelope-12months.png", href: `${SHOP_BASE}/post-from-provence-mail-club` },
 ];
+
+const GIFT_HREF = `${SHOP_BASE}/gift-subscription-post-from-provence-mail-club-inside-of-the-eu`;
 
 export default function SubscriptionTiers() {
   return (
@@ -12,12 +16,14 @@ export default function SubscriptionTiers() {
         {TIERS.map((tier) => (
           <a
             key={tier.label}
-            href="#waitlist"
+            href={tier.href}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group block cursor-pointer"
           >
             <img
               src={tier.img}
-              alt={`${tier.label} — join the waitlist`}
+              alt={tier.label}
               className="w-full h-auto transition-transform group-hover:scale-105"
             />
           </a>
@@ -26,12 +32,14 @@ export default function SubscriptionTiers() {
       {/* Same width as one grid column above, at every breakpoint, so it's
           truly the same size rather than an independently-guessed value. */}
       <a
-        href="#waitlist"
+        href={GIFT_HREF}
+        target="_blank"
+        rel="noopener noreferrer"
         className="group block cursor-pointer mx-auto mt-8 w-[calc((100%-24px)/2)] sm:w-[calc((100%-32px)/2)] lg:w-[calc((100%-96px)/4)]"
       >
         <img
           src="/envelope-gift.png"
-          alt="Gift Me — join the waitlist"
+          alt="Gift Me"
           className="w-full h-auto transition-transform group-hover:scale-105"
         />
       </a>
