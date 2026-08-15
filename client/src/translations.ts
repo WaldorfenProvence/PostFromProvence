@@ -109,9 +109,9 @@ export const translations: Record<Lang, Translations> = {
       intro:
         "Give a year of Post From Provence to someone you love — 12 handcrafted mailings, paid once upfront, with the 12th month free. Choose where your recipient lives so we can get the shipping right.",
       euLabel: "Recipient in the EU",
-      euNote: "€100 — 11 months for the price of 10",
+      euNote: "11 months for the price of 10",
       intlLabel: "Recipient outside the EU",
-      intlNote: "€150 — 11 months for the price of 10",
+      intlNote: "11 months for the price of 10",
       button: "Choose this option",
     },
   },
@@ -184,9 +184,9 @@ export const translations: Record<Lang, Translations> = {
       intro:
         "Offrez une année de Post From Provence à quelqu'un que vous aimez — 12 envois faits main, payés en une fois, le 12e mois offert. Choisissez où vit votre destinataire pour que nous puissions calculer les frais d'envoi correctement.",
       euLabel: "Destinataire dans l'UE",
-      euNote: "100 € — 11 mois pour le prix de 10",
+      euNote: "11 mois pour le prix de 10",
       intlLabel: "Destinataire hors de l'UE",
-      intlNote: "150 € — 11 mois pour le prix de 10",
+      intlNote: "11 mois pour le prix de 10",
       button: "Choisir cette option",
     },
   },
