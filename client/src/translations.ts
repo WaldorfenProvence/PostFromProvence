@@ -127,8 +127,8 @@ export const translations: Record<Lang, Translations> = {
       button: "Choose this option",
     },
     subscribe: {
-      euTileLabel: "EU Subscriptions",
-      intlTileLabel: "International Subscriptions",
+      euTileLabel: "Inside of the European Union",
+      intlTileLabel: "Rest of the World",
       euHeading: "EU Subscriptions",
       euIntro: "For subscribers living in the European Union. Choose how often you'd like to be billed — you'll pick the exact plan on the next page.",
       intlHeading: "International Subscriptions",
@@ -214,8 +214,8 @@ export const translations: Record<Lang, Translations> = {
       button: "Choisir cette option",
     },
     subscribe: {
-      euTileLabel: "Abonnements UE",
-      intlTileLabel: "Abonnements internationaux",
+      euTileLabel: "À l'intérieur de l'Union européenne",
+      intlTileLabel: "Reste du monde",
       euHeading: "Abonnements UE",
       euIntro: "Pour les abonnés vivant dans l'Union européenne. Choisissez la fréquence de facturation souhaitée — vous choisirez le forfait exact sur la page suivante.",
       intlHeading: "Abonnements internationaux",
