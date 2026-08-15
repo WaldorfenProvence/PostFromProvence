@@ -88,7 +88,7 @@ export const translations: Record<Lang, Translations> = {
       items: [
         {
           q: "When will I receive my post?",
-          a: "We mail Post From Provence around the 15th of every month. Join before the 10th and you'll get that month's post; join after, and your first post arrives the following month.",
+          a: "We mail Post From Provence around the 15th of every month. To receive a given month's edition, you need to sign up by the 15th of the previous month (for example, sign up by August 15th to receive September's post). For our very first edition — launching in September — anyone who signs up before then will be included; the usual deadline starts from October's edition onward.",
         },
         {
           q: "How do I cancel or update my address?",
@@ -175,7 +175,7 @@ export const translations: Record<Lang, Translations> = {
       items: [
         {
           q: "Quand vais-je recevoir mon courrier ?",
-          a: "Nous envoyons Post From Provence vers le 15 de chaque mois. Inscrivez-vous avant le 10 pour recevoir le courrier du mois ; après, votre premier envoi arrivera le mois suivant.",
+          a: "Nous envoyons Post From Provence vers le 15 de chaque mois. Pour recevoir l'édition d'un mois donné, vous devez vous inscrire avant le 15 du mois précédent (par exemple, inscrivez-vous avant le 15 août pour recevoir le courrier de septembre). Pour notre toute première édition — le lancement ayant lieu en septembre — toute personne inscrite avant cette date sera incluse ; la date limite habituelle s'appliquera à partir de l'édition d'octobre.",
         },
         {
           q: "Comment annuler ou modifier mon adresse ?",
