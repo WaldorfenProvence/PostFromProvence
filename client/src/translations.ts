@@ -37,6 +37,18 @@ export type Translations = {
     intlNote: string;
     button: string;
   };
+  subscribe: {
+    euTileLabel: string;
+    intlTileLabel: string;
+    euHeading: string;
+    euIntro: string;
+    intlHeading: string;
+    intlIntro: string;
+    monthlyLabel: string;
+    sixMonthLabel: string;
+    twelveMonthLabel: string;
+    button: string;
+  };
 };
 
 export const translations: Record<Lang, Translations> = {
@@ -114,6 +126,18 @@ export const translations: Record<Lang, Translations> = {
       intlNote: "11 months for the price of 10",
       button: "Choose this option",
     },
+    subscribe: {
+      euTileLabel: "EU Subscriptions",
+      intlTileLabel: "International Subscriptions",
+      euHeading: "EU Subscriptions",
+      euIntro: "For subscribers living in the European Union. Choose how often you'd like to be billed — you'll pick the exact plan on the next page.",
+      intlHeading: "International Subscriptions",
+      intlIntro: "For subscribers living outside the European Union. Choose how often you'd like to be billed — you'll pick the exact plan on the next page.",
+      monthlyLabel: "Monthly",
+      sixMonthLabel: "6 Months",
+      twelveMonthLabel: "12 Months",
+      button: "Continue",
+    },
   },
   fr: {
     nav: { join: "Rejoignez notre liste !", shop: "Boutique", about: "À propos" },
@@ -188,6 +212,18 @@ export const translations: Record<Lang, Translations> = {
       intlLabel: "Destinataire hors de l'UE",
       intlNote: "11 mois pour le prix de 10",
       button: "Choisir cette option",
+    },
+    subscribe: {
+      euTileLabel: "Abonnements UE",
+      intlTileLabel: "Abonnements internationaux",
+      euHeading: "Abonnements UE",
+      euIntro: "Pour les abonnés vivant dans l'Union européenne. Choisissez la fréquence de facturation souhaitée — vous choisirez le forfait exact sur la page suivante.",
+      intlHeading: "Abonnements internationaux",
+      intlIntro: "Pour les abonnés vivant hors de l'Union européenne. Choisissez la fréquence de facturation souhaitée — vous choisirez le forfait exact sur la page suivante.",
+      monthlyLabel: "Mensuel",
+      sixMonthLabel: "6 mois",
+      twelveMonthLabel: "12 mois",
+      button: "Continuer",
     },
   },
 };

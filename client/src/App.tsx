@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage";
 import ShopComingSoon from "./components/ShopComingSoon";
 import AboutPage from "./components/AboutPage";
 import GiftPage from "./components/GiftPage";
+import SubscribeOptionsPage from "./components/SubscribeOptionsPage";
 import Footer from "./components/Footer";
 import StripeBorders from "./components/StripeBorders";
 import StripeRibbon from "./components/StripeRibbon";
@@ -12,9 +13,9 @@ import { LanguageProvider } from "./LanguageContext";
 // Consulting ("Pick Our Brains") is deliberately left out for now — to add
 // it back later, add "consulting" here and to the nav array in Header.tsx,
 // then render a <ConsultingPage /> case below.
-export type Tab = "home" | "shop" | "about" | "gift";
+export type Tab = "home" | "shop" | "about" | "gift" | "subscribe-eu" | "subscribe-intl";
 
-const VALID_TABS: Tab[] = ["home", "shop", "about", "gift"];
+const VALID_TABS: Tab[] = ["home", "shop", "about", "gift", "subscribe-eu", "subscribe-intl"];
 
 function getTabFromHash(): Tab {
   const hash = window.location.hash.replace("#", "");
@@ -48,6 +49,8 @@ export default function App() {
           {activeTab === "shop" && <ShopComingSoon />}
           {activeTab === "about" && <AboutPage />}
           {activeTab === "gift" && <GiftPage />}
+          {activeTab === "subscribe-eu" && <SubscribeOptionsPage region="eu" />}
+          {activeTab === "subscribe-intl" && <SubscribeOptionsPage region="intl" />}
         </main>
         <Footer />
         <StripeRibbon flip />
