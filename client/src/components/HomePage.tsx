@@ -61,7 +61,7 @@ export default function HomePage({
             <h2 className="text-5xl sm:text-6xl font-serif text-[#B86F4B] mb-10 text-center">
               {t.pricing.heading}
             </h2>
-            <SubscriptionTiers />
+            <SubscriptionTiers onNavigate={onNavigate} />
           </section>
         </div>
       </StripedBlock>

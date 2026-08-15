@@ -28,6 +28,15 @@ export type Translations = {
     proceeds: string;
     contact: string;
   };
+  gift: {
+    heading: string;
+    intro: string;
+    euLabel: string;
+    euNote: string;
+    intlLabel: string;
+    intlNote: string;
+    button: string;
+  };
 };
 
 export const translations: Record<Lang, Translations> = {
@@ -95,6 +104,16 @@ export const translations: Record<Lang, Translations> = {
         "All proceeds from our work here at Post from Provence go directly to supporting our independant co-operative school close to Aix-en-Provence. We hope you enjoy our handmade offerings drawing on the richness of the talents in our community. We welcome you along on our journey.",
       contact: "Questions, or want to get in touch? Email us at",
     },
+    gift: {
+      heading: "Gift a Subscription",
+      intro:
+        "Give a year of Post From Provence to someone you love — 12 handcrafted mailings, paid once upfront, with the 12th month free. Choose where your recipient lives so we can get the shipping right.",
+      euLabel: "Recipient in the EU",
+      euNote: "€100 — 11 months for the price of 10",
+      intlLabel: "Recipient outside the EU",
+      intlNote: "€150 — 11 months for the price of 10",
+      button: "Choose this option",
+    },
   },
   fr: {
     nav: { join: "Rejoignez notre liste !", shop: "Boutique", about: "À propos" },
@@ -159,6 +178,16 @@ export const translations: Record<Lang, Translations> = {
       proceeds:
         "Tous les bénéfices de notre travail chez Post from Provence vont directement au soutien de notre école coopérative indépendante près d'Aix-en-Provence. Nous espérons que vous apprécierez nos créations artisanales qui puisent dans la richesse des talents de notre communauté. Nous vous accueillons avec plaisir dans notre aventure.",
       contact: "Des questions, ou envie de nous contacter ? Écrivez-nous à",
+    },
+    gift: {
+      heading: "Offrir un abonnement",
+      intro:
+        "Offrez une année de Post From Provence à quelqu'un que vous aimez — 12 envois faits main, payés en une fois, le 12e mois offert. Choisissez où vit votre destinataire pour que nous puissions calculer les frais d'envoi correctement.",
+      euLabel: "Destinataire dans l'UE",
+      euNote: "100 € — 11 mois pour le prix de 10",
+      intlLabel: "Destinataire hors de l'UE",
+      intlNote: "150 € — 11 mois pour le prix de 10",
+      button: "Choisir cette option",
     },
   },
 };
