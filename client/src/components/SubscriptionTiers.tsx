@@ -9,8 +9,8 @@ export default function SubscriptionTiers({
   const { t } = useLanguage();
 
   const REGIONS: { label: string; img: string; tab: Tab }[] = [
-    { label: t.subscribe.euTileLabel, img: "/envelope-france.svg", tab: "subscribe-eu" },
-    { label: t.subscribe.intlTileLabel, img: "/envelope-international.png", tab: "subscribe-intl" },
+    { label: t.subscribe.euTileLabel, img: "/envelope-france-home.png", tab: "subscribe-eu" },
+    { label: t.subscribe.intlTileLabel, img: "/envelope-international-home.png", tab: "subscribe-intl" },
   ];
 
   return (
@@ -37,7 +37,7 @@ export default function SubscriptionTiers({
         className="group block cursor-pointer mx-auto mt-8 w-[calc((100%-24px)/2)] sm:w-64"
       >
         <img
-          src="/envelope-gift.png"
+          src="/envelope-gift-home.png"
           alt="Gift Me"
           className="w-full h-auto transition-transform group-hover:scale-105"
         />
