@@ -1,16 +1,22 @@
 import { useLanguage } from "../LanguageContext";
 
-const EU_PRODUCT_HREF = "https://qjndqv-1b.myshopify.com/products/post-from-provence-mail-club";
-const INTL_PRODUCT_HREF = "https://qjndqv-1b.myshopify.com/products/post-from-provence-mail-club-outside-of-the-eu";
+const MONTHLY_HREF = {
+  eu: "https://qjndqv-1b.myshopify.com/products/post-from-provence-mail-club",
+  intl: "https://qjndqv-1b.myshopify.com/products/post-from-provence-mail-club-outside-of-the-eu",
+};
+
+const ANNUAL_HREF = {
+  eu: "https://qjndqv-1b.myshopify.com/products/annual-subscription-post-from-provence-mail-club-inside-france",
+  intl: "https://qjndqv-1b.myshopify.com/products/annual-subscription-post-from-provence-mail-club-international",
+};
 
 export default function SubscribeOptionsPage({ region }: { region: "eu" | "intl" }) {
   const { t } = useLanguage();
   const isEu = region === "eu";
-  const productHref = isEu ? EU_PRODUCT_HREF : INTL_PRODUCT_HREF;
 
   const options = [
-    { label: t.subscribe.monthlyLabel, img: "/envelope-monthly.png" },
-    { label: t.subscribe.twelveMonthLabel, img: "/envelope-12months.png" },
+    { label: t.subscribe.monthlyLabel, img: "/envelope-monthly.png", href: MONTHLY_HREF[region] },
+    { label: t.subscribe.twelveMonthLabel, img: "/envelope-12months.png", href: ANNUAL_HREF[region] },
   ];
 
   return (
@@ -26,7 +32,7 @@ export default function SubscribeOptionsPage({ region }: { region: "eu" | "intl"
         {options.map((option) => (
           <a
             key={option.label}
-            href={productHref}
+            href={option.href}
             target="_blank"
             rel="noopener noreferrer"
             className="group block text-center"
