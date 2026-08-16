@@ -10,7 +10,6 @@ export default function SubscribeOptionsPage({ region }: { region: "eu" | "intl"
 
   const options = [
     { label: t.subscribe.monthlyLabel, img: "/envelope-monthly.png" },
-    { label: t.subscribe.sixMonthLabel, img: "/envelope-6months.png" },
     { label: t.subscribe.twelveMonthLabel, img: "/envelope-12months.png" },
   ];
 
@@ -23,7 +22,7 @@ export default function SubscribeOptionsPage({ region }: { region: "eu" | "intl"
         {isEu ? t.subscribe.euIntro : t.subscribe.intlIntro}
       </p>
 
-      <div className="grid grid-cols-3 gap-4 sm:gap-6">
+      <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-md mx-auto">
         {options.map((option) => (
           <a
             key={option.label}
