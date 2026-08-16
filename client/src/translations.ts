@@ -119,7 +119,7 @@ export const translations: Record<Lang, Translations> = {
     gift: {
       heading: "Gift a Subscription",
       intro:
-        "Give a year of Post From Provence to someone you love — 12 handcrafted mailings, paid once upfront, with the 12th month free. Choose where your recipient lives so we can get the shipping right.",
+        "Give a year of Post From Provence to someone you love — our Annual Subscription runs September to July, like the school year, with a little summer pause in August. Choose where your recipient lives so we can get the shipping right.",
       euLabel: "Recipient in the EU",
       euNote: "11 months for the price of 10",
       intlLabel: "Recipient outside the EU",
@@ -206,7 +206,7 @@ export const translations: Record<Lang, Translations> = {
     gift: {
       heading: "Offrir un abonnement",
       intro:
-        "Offrez une année de Post From Provence à quelqu'un que vous aimez — 12 envois faits main, payés en une fois, le 12e mois offert. Choisissez où vit votre destinataire pour que nous puissions calculer les frais d'envoi correctement.",
+        "Offrez une année de Post From Provence à quelqu'un que vous aimez — notre abonnement annuel se déroule de septembre à juillet, comme l'année scolaire, avec une petite pause estivale en août. Choisissez où vit votre destinataire pour que nous puissions calculer les frais d'envoi correctement.",
       euLabel: "Destinataire dans l'UE",
       euNote: "11 mois pour le prix de 10",
       intlLabel: "Destinataire hors de l'UE",
