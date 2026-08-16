@@ -15,8 +15,8 @@ export default function SubscribeOptionsPage({ region }: { region: "eu" | "intl"
   const isEu = region === "eu";
 
   const options = [
-    { label: t.subscribe.monthlyLabel, img: "/envelope-monthly.png", href: MONTHLY_HREF[region] },
-    { label: t.subscribe.twelveMonthLabel, img: "/envelope-12months.png", href: ANNUAL_HREF[region] },
+    { label: t.subscribe.monthlyLabel, img: "/envelope-pay-monthly.png", href: MONTHLY_HREF[region] },
+    { label: t.subscribe.twelveMonthLabel, img: "/envelope-pay-once.png", href: ANNUAL_HREF[region] },
   ];
 
   return (
