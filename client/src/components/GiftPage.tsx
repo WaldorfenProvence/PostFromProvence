@@ -15,7 +15,7 @@ export default function GiftPage() {
         {t.gift.heading}
       </h2>
       <img
-        src="/envelope-gift.png"
+        src="/envelope-monthly-gift.png"
         alt={t.gift.heading}
         className="w-48 sm:w-56 h-auto mx-auto mb-8"
       />

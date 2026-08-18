@@ -13,7 +13,7 @@ export default function SubscribeOptionsPage({ region }: { region: "eu" | "intl"
   const isEu = region === "eu";
 
   const options = [
-    { label: t.subscribe.monthlyLabel, img: "/envelope-pay-monthly.png", href: MONTHLY_HREF[region] },
+    { label: t.subscribe.monthlyLabel, img: "/envelope-monthly-subscription.png", href: MONTHLY_HREF[region] },
   ];
 
   return (
