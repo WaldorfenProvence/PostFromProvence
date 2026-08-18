@@ -5,10 +5,8 @@ const MONTHLY_HREF = {
   intl: "https://qjndqv-1b.myshopify.com/products/post-from-provence-mail-club-outside-of-the-eu",
 };
 
-const ANNUAL_HREF = {
-  eu: "https://qjndqv-1b.myshopify.com/products/annual-subscription-post-from-provence-mail-club-inside-france",
-  intl: "https://qjndqv-1b.myshopify.com/products/annual-subscription-post-from-provence-mail-club-international",
-};
+// Annual Subscription (one-time, pay-once-and-save) is mothballed for now —
+// see docs/annual-subscription-mothballed.md for the full restore spec.
 
 export default function SubscribeOptionsPage({ region }: { region: "eu" | "intl" }) {
   const { t } = useLanguage();
@@ -16,7 +14,6 @@ export default function SubscribeOptionsPage({ region }: { region: "eu" | "intl"
 
   const options = [
     { label: t.subscribe.monthlyLabel, img: "/envelope-pay-monthly.png", href: MONTHLY_HREF[region] },
-    { label: t.subscribe.twelveMonthLabel, img: "/envelope-pay-once.png", href: ANNUAL_HREF[region] },
   ];
 
   return (
@@ -28,7 +25,7 @@ export default function SubscribeOptionsPage({ region }: { region: "eu" | "intl"
         {isEu ? t.subscribe.euIntro : t.subscribe.intlIntro}
       </p>
 
-      <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-md mx-auto">
+      <div className="grid grid-cols-1 gap-4 sm:gap-6 max-w-[220px] mx-auto">
         {options.map((option) => (
           <a
             key={option.label}

@@ -1,9 +1,10 @@
 import { useLanguage } from "../LanguageContext";
 
-const EU_HREF =
-  "https://qjndqv-1b.myshopify.com/products/gift-subscription-post-from-provence-mail-club-inside-of-the-eu";
-const INTL_HREF =
-  "https://qjndqv-1b.myshopify.com/products/gift-subscription-post-from-provence-mail-club-outside-of-the-eu";
+// Points at the same Monthly recurring products used on the subscribe
+// pages — gifting just means billing the buyer's card monthly and
+// shipping to the recipient's address, not a separate product.
+const EU_HREF = "https://qjndqv-1b.myshopify.com/products/post-from-provence-mail-club";
+const INTL_HREF = "https://qjndqv-1b.myshopify.com/products/post-from-provence-mail-club-outside-of-the-eu";
 
 export default function GiftPage() {
   const { t } = useLanguage();
