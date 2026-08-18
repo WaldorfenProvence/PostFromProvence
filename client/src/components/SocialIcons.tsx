@@ -3,7 +3,6 @@
 const LINKS = {
   instagram: "#",
   tiktok: "#",
-  youtube: "#",
 };
 
 function IconWrap({ children }: { children: React.ReactNode }) {
@@ -42,15 +41,6 @@ function TikTokIcon() {
   );
 }
 
-function YoutubeIcon() {
-  return (
-    <IconWrap>
-      <rect x="2.5" y="5.5" width="19" height="13" rx="4" />
-      <path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor" stroke="none" />
-    </IconWrap>
-  );
-}
-
 export default function SocialIcons() {
   return (
     <div className="flex items-center gap-4 text-[#6B7A4F]">
@@ -67,13 +57,6 @@ export default function SocialIcons() {
         className="hover:opacity-70 transition-opacity"
       >
         <TikTokIcon />
-      </a>
-      <a
-        href={LINKS.youtube}
-        aria-label="YouTube (coming soon)"
-        className="hover:opacity-70 transition-opacity"
-      >
-        <YoutubeIcon />
       </a>
     </div>
   );
