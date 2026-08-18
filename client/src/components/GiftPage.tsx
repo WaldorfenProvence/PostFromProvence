@@ -28,7 +28,7 @@ export default function GiftPage() {
           rel="noopener noreferrer"
           className="block text-center bg-white/85 rounded-2xl p-6 hover:bg-white transition-colors"
         >
-          <h3 className="font-serif text-2xl mb-2">{t.gift.euLabel}</h3>
+          <h3 className="font-serif text-2xl mb-2 whitespace-nowrap">{t.gift.euLabel}</h3>
           <p className="mb-4">{t.gift.euNote}</p>
           <span className="inline-block bg-slate-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-500 transition-colors">
             {t.gift.button}
@@ -41,7 +41,7 @@ export default function GiftPage() {
           rel="noopener noreferrer"
           className="block text-center bg-white/85 rounded-2xl p-6 hover:bg-white transition-colors"
         >
-          <h3 className="font-serif text-2xl mb-2">{t.gift.intlLabel}</h3>
+          <h3 className="font-serif text-2xl mb-2 whitespace-nowrap">{t.gift.intlLabel}</h3>
           <p className="mb-4">{t.gift.intlNote}</p>
           <span className="inline-block bg-slate-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-500 transition-colors">
             {t.gift.button}
