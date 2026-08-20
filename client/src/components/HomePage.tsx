@@ -73,7 +73,7 @@ export default function HomePage({
           <p className="leading-relaxed">{t.why.body}</p>
         </section>
 
-        {/* CTA — sends to the shop, which will handle actual checkout */}
+        {/* Heading only — real subscribe buttons live in the pricing section above */}
         <section
           id="waitlist"
           className="max-w-lg mx-auto text-center scroll-mt-24"
@@ -81,13 +81,6 @@ export default function HomePage({
           <h2 className="text-3xl font-serif text-[#6B7A4F] mb-6">
             {t.waitlist.heading}
           </h2>
-
-          <button
-            onClick={() => onNavigate("shop")}
-            className="bg-slate-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-slate-500 transition-colors cursor-pointer"
-          >
-            {t.waitlist.button}
-          </button>
         </section>
 
         <FAQSection />
