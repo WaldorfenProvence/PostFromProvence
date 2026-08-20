@@ -46,7 +46,7 @@ export default function App() {
         <Header activeTab={activeTab} onNavigate={changeTab} />
         <main className="flex-1">
           {activeTab === "home" && <HomePage onNavigate={changeTab} />}
-          {activeTab === "shop" && <ShopComingSoon />}
+          {activeTab === "shop" && <ShopComingSoon onNavigate={changeTab} />}
           {activeTab === "about" && <AboutPage />}
           {activeTab === "gift" && <GiftPage />}
           {activeTab === "subscribe-eu" && <SubscribeOptionsPage region="eu" />}
