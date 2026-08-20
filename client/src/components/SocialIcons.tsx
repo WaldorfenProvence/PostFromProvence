@@ -1,7 +1,5 @@
-// Placeholder href ("#") until the Instagram account is found — swap in
-// once the handle is confirmed.
 const LINKS = {
-  instagram: "#",
+  instagram: "https://www.instagram.com/postfromprovence",
   tiktok: "https://www.tiktok.com/@postfromprovence",
 };
 
@@ -46,7 +44,9 @@ export default function SocialIcons() {
     <div className="flex items-center gap-4 text-[#6B7A4F]">
       <a
         href={LINKS.instagram}
-        aria-label="Instagram (coming soon)"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
         className="hover:opacity-70 transition-opacity"
       >
         <InstagramIcon />
