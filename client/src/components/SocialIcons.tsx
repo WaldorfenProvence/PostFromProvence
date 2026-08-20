@@ -1,8 +1,8 @@
-// Placeholder hrefs ("#") until the accounts exist — swap these for the
-// real profile URLs once they're live.
+// Placeholder href ("#") until the Instagram account is found — swap in
+// once the handle is confirmed.
 const LINKS = {
   instagram: "#",
-  tiktok: "#",
+  tiktok: "https://www.tiktok.com/@postfromprovence",
 };
 
 function IconWrap({ children }: { children: React.ReactNode }) {
@@ -53,7 +53,9 @@ export default function SocialIcons() {
       </a>
       <a
         href={LINKS.tiktok}
-        aria-label="TikTok (coming soon)"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="TikTok"
         className="hover:opacity-70 transition-opacity"
       >
         <TikTokIcon />
